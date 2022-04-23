@@ -1,0 +1,13 @@
+.items{
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.name{
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.img{
+    margin-top:2rem;
+}

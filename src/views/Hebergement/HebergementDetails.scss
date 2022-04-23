@@ -1,0 +1,35 @@
+.details{
+    border: 1px solid black;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 38rem;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow:  1rem 1rem 1rem rgba(0, 0, 0, 0.15);
+}
+.detailsHebergement{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+.imgDetails{
+   
+    
+    border-radius: 5px;
+    height: auto;
+    width: 60%;
+}
+.reservation{
+    background-color:  #0d6efd;
+    color : white;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    padding-top: 3px;
+    align-self: center;
+}
+.map{
+    align-self: center;
+}
