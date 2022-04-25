@@ -25,10 +25,12 @@ const[click,setOnclick]=useState(false);
     const {register,formState:{errors}} = useForm();
    
 
-    let resp;
-   const enregistre =async()=>{
+    
+   const enregistre =()=>{
+       console.log("test")
        try{
-               resp = await createUserWithEmailAndPassword(auth,emails,password);
+        setOnclick(true);
+                const resp =  createUserWithEmailAndPassword(auth,emails,password);
             
                  console.log(resp);
               
@@ -40,6 +42,7 @@ const[click,setOnclick]=useState(false);
                 
             }
    }
+   
    
     return (
         <div style={style} >
@@ -59,25 +62,26 @@ const[click,setOnclick]=useState(false);
                                 
                                 })} variant="standard" label="email" onChange={(e)=>setEmail(e.target.value)} placeholder="email" autoComplete='off' />
                            
-                            {errors?.email?.type==='required' && <Alert severity="error">Email est obligatoire</Alert>}
+                            
                             {errors.email && <Alert severity='error' >le email est obligatoire</Alert>}
                           
                             
                             <TextField {...register('password',{
                                     required:true,
                                     value:'',
-                                    message:'le password est obligatoire'
+                                   
                                 })} variant="standard" label="password" type='password' onChange={(e)=>setPassword(e.target.value)} />
                             {errors.password && <Alert severity='error' >le password est obligatoire</Alert>}
-                            <Button variant ="contained" onClick={()=>[setOnclick(true),enregistre]}  >Inscription</Button>
+                           
                           </Box>
-                        
+                          
                     </div>
-                <div id="error"></div>
+                    
                
             </div>
+            <button onClick={enregistre} >Inscription</button>
             {emails && password && click  && <Alert severity="success"className='success'>Votre compte a été créé avec succès</Alert>}
-            {!emails && !password && click && <Alert severity="error"className='error'>Veuillez remplir tous les champs</Alert>}
+            {/*!emails && !password && click && <Alert severity="error"className='error'>Veuillez remplir tous les champs</Alert>*/}
         </div>
     )
 }

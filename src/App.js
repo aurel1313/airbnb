@@ -10,6 +10,7 @@ import { HebergementDetail } from './views/Hebergement/HebergementDetails';
 import Notifications from './views/Notification/Notifications';
 import { Reservation } from './views/Reservations/Reservation';
 import { Inscription } from './views/Inscription/Inscription';
+import {Connexion} from './views/Connexion/Connexion';
 import React from 'react';
 import { useState } from 'react';
 import { initializeApp } from "firebase/app";
@@ -17,8 +18,7 @@ import { getAuth } from "firebase/auth";
 import {Firebase} from './config/Firebase/Firebase';
 import { getAnalytics } from 'firebase/analytics';
 function App() {
-  const[email,setEmail]=useState('');
-  const[password,setPassword]=useState('');
+  
 
   
   // Initialize Firebase
@@ -36,6 +36,7 @@ function App() {
         <Routes>
           
           <Route path="inscription" element={<Inscription />} />
+          <Route path="connexion" element={<Connexion/>}/>
           <Route path="notification" element={<Notifications/>}/>
            <Route path="hebergement" element={<Hebergement />} >
               <Route path="hebergementDetail/:id" element={<HebergementDetail />} />
