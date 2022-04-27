@@ -27,7 +27,7 @@ export const Sidebars = () => {
    const menuItems = [
      
       { name: 'Notifications', to: '/notification' ,subMenuItems:[],icon:Notification},
-      { name: 'Settings', to: '/settings' , icon:Setting,subMenuItems:[
+      { name: 'Settings', to: '/settings' ,icon:Setting,subMenuItems:[
         { name: 'PaletteColor', to: '/paletteColor' },
       ] },
      
@@ -67,7 +67,8 @@ export const Sidebars = () => {
 }
 const header={
   fullName:"sidebar",
-  shortName:"SB"
+  shortName:"SB",
+ 
 }
     return(
         <div style={style}>
@@ -90,7 +91,7 @@ const header={
                
             
             
-                <StylishSidebar maxWidth="50rem" widthExpand="50%" backgroundImage={backgroundImage}  menuItems={menuItems}   header={header} isOpen={false} colorPalette={paletteColor} onMenuItemClick={handleMenuItemClick}   />
+                <StylishSidebar maxWidth="10rem" widthExpand="10%" backgroundImage={backgroundImage}  menuItems={menuItems}   header={header} isOpen={false} colorPalette={paletteColor} onMenuItemClick={handleMenuItemClick}   />
                
               
                

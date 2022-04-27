@@ -24,6 +24,7 @@ export const Header = () => {
            <p className="text-white left mt-1 fw-bold fs-4 ms-3">AirHotel</p>
            <ul className="navigation">
                 <li className="links">
+                    <Link to="/">Accueil</Link>
                     <Link to="/hebergement" className="mt-2 text-white me-5 bd-highlight" text="hebergement" >hebergement</Link>
                     
                     <Links redirect="#" className="mt-2 text-white me-5  bd-highlight" text="voyages" />

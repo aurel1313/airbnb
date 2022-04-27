@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import { Container } from 'react-bootstrap';
+import { Container } from './views/Container/Container';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Database } from './config/Database/Database';
@@ -31,10 +31,11 @@ function App() {
     <div className="App" style={style}>
         
         <Header/>,
-        <Container/>
+       
         
         <Routes>
-          
+          <Route path="/" element={<Container/>}/>
+       
           <Route path="inscription" element={<Inscription />} />
           <Route path="connexion" element={<Connexion/>}/>
           <Route path="notification" element={<Notifications/>}/>
