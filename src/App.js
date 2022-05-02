@@ -11,6 +11,7 @@ import Notifications from './views/Notification/Notifications';
 import { Reservation } from './views/Reservations/Reservation';
 import { Inscription } from './views/Inscription/Inscription';
 import {Connexion} from './views/Connexion/Connexion';
+import { Logement } from './views/Logement/Logement';
 import React from 'react';
 import { useState } from 'react';
 import { initializeApp } from "firebase/app";
@@ -35,7 +36,7 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Container/>}/>
-       
+          <Route path="/logement" element={<Logement/>}/>
           <Route path="inscription" element={<Inscription />} />
           <Route path="connexion" element={<Connexion/>}/>
           <Route path="notification" element={<Notifications/>}/>

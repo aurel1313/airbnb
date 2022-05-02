@@ -1,0 +1,61 @@
+[
+    {
+        
+        
+            "address": "Ap #372-9048 Donec Street",
+            "postalZip": "4541",
+            "region": "Minas Gerais",
+            "latlng": "-23.5033979904, -28.2978409472",
+            "country": "Norway",
+            "currency": "€2,151,491",
+            "id": "0"
+            
+        },
+         {
+            "address": "Ap #952-7366 Consequat Ave",
+            "postalZip": "1055",
+            "region": "Huáběi",
+            "latlng": "36.1419408384, 36.2936892416",
+            "country": "Germany",
+            "currency": "€6,603,690",
+            "id": "1"
+        },
+        {
+            "address": "P.O. Box 434, 511 Diam Av.",
+            "postalZip": "35951",
+            "region": "North Island",
+            "latlng": "39.8925927424, -110.4513475584",
+            "country": "Peru",
+            "currency": "€6,586,054",
+            "id": "3"
+        },
+        {
+            "address": "Ap #427-8799 Praesent Rd.",
+            "postalZip": "6721",
+            "region": "North Chungcheong",
+            "latlng": "40.874530816, -91.2676032512",
+            "country": "Italy",
+            "currency": "€6,318,220",
+            "id": "4"
+        },
+        {
+            "address": "Ap #906-2649 Amet, Rd.",
+            "postalZip": "66777-544",
+            "region": "Western Australia",
+            "latlng": "14.4264880128, -150.3951611904",
+            "country": "Mexico",
+            "currency": "€9,259,457",
+            "id": "5"
+        },
+        
+        {
+            "address": "156-7071 In Ave",
+            "postalZip": "5636",
+            "region": "Guanacaste",
+            "latlng": "57.3882504192, 73.2914016256",
+            "country": "United Kingdom",
+            "currency": "€8,593,293",
+            "id": "6"
+        }
+    
+]

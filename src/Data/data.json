@@ -1,0 +1,807 @@
+[
+	{
+		"address": "Ap #372-9048 Donec Street",
+		"postalZip": "4541",
+		"region": "Minas Gerais",
+		"latlng": "-23.5033979904, -28.2978409472",
+		"country": "Norway",
+		"currency": "€2,151,491",
+		"id": "1"
+		
+	},
+	{
+		"address": "Ap #952-7366 Consequat Ave",
+		"postalZip": "1055",
+		"region": "Huáběi",
+		"latlng": "36.1419408384, 36.2936892416",
+		"country": "Germany",
+		"currency": "€6,603,690",
+		"id": "2"
+	},
+	{
+		"address": "P.O. Box 434, 511 Diam Av.",
+		"postalZip": "35951",
+		"region": "North Island",
+		"latlng": "39.8925927424, -110.4513475584",
+		"country": "Peru",
+		"currency": "€6,586,054",
+		"id": "3"
+	},
+	{
+		"address": "Ap #427-8799 Praesent Rd.",
+		"postalZip": "6721",
+		"region": "North Chungcheong",
+		"latlng": "40.874530816, -91.2676032512",
+		"country": "Italy",
+		"currency": "€6,318,220",
+		"id": "4"
+	},
+	{
+		"address": "Ap #906-2649 Amet, Rd.",
+		"postalZip": "66777-544",
+		"region": "Western Australia",
+		"latlng": "14.4264880128, -150.3951611904",
+		"country": "Mexico",
+		"currency": "€9,259,457"
+	},
+	{
+		"address": "156-7071 In Ave",
+		"postalZip": "5636",
+		"region": "Guanacaste",
+		"latlng": "57.3882504192, 73.2914016256",
+		"country": "United Kingdom",
+		"currency": "€8,593,293"
+	},
+	{
+		"address": "7589 Nullam Rd.",
+		"postalZip": "71513-86377",
+		"region": "Pomorskie",
+		"latlng": "-63.5453456384, 155.885846528",
+		"country": "Mexico",
+		"currency": "€6,603,549"
+	},
+	{
+		"address": "254-302 Dis Road",
+		"postalZip": "85764",
+		"region": "Xīběi",
+		"latlng": "14.2261656576, 62.1705081856",
+		"country": "Austria",
+		"currency": "€6,207,270"
+	},
+	{
+		"address": "260-1034 Amet, Street",
+		"postalZip": "242236",
+		"region": "Lower Austria",
+		"latlng": "-88.00807936, 129.164004864",
+		"country": "Canada",
+		"currency": "€5,736,635"
+	},
+	{
+		"address": "Ap #468-4788 Molestie St.",
+		"postalZip": "77494",
+		"region": "North-East Region",
+		"latlng": "54.9232740352, 112.920045568",
+		"country": "Australia",
+		"currency": "€6,214,270"
+	},
+	{
+		"address": "P.O. Box 313, 7384 Est, St.",
+		"postalZip": "73-32",
+		"region": "Calabria",
+		"latlng": "62.7099776, 77.9013809152",
+		"country": "Philippines",
+		"currency": "€2,205,541"
+	},
+	{
+		"address": "547-3901 Vitae, Street",
+		"postalZip": "33242",
+		"region": "Chiapas",
+		"latlng": "-1.1548935168, 143.9120658432",
+		"country": "Peru",
+		"currency": "€9,182,183"
+	},
+	{
+		"address": "P.O. Box 494, 5030 Nec, Avenue",
+		"postalZip": "47136",
+		"region": "Corse",
+		"latlng": "72.441176064, 132.5151102976",
+		"country": "Mexico",
+		"currency": "€5,607,393"
+	},
+	{
+		"address": "861-3685 Adipiscing St.",
+		"postalZip": "651443",
+		"region": "Zachodniopomorskie",
+		"latlng": "-36.2202402816, 77.1094383616",
+		"country": "Ireland",
+		"currency": "€3,566,650"
+	},
+	{
+		"address": "674 Eget Street",
+		"postalZip": "441187",
+		"region": "Ulster",
+		"latlng": "-24.0513113088, 177.9522550784",
+		"country": "Ukraine",
+		"currency": "€8,361,483"
+	},
+	{
+		"address": "3507 At, Av.",
+		"postalZip": "41217",
+		"region": "Trøndelag",
+		"latlng": "-89.1184837632, -45.5477874688",
+		"country": "Peru",
+		"currency": "€9,504,752"
+	},
+	{
+		"address": "204-1397 Sed Road",
+		"postalZip": "35-47",
+		"region": "Limpopo",
+		"latlng": "-79.5395282944, 177.0419600384",
+		"country": "Canada",
+		"currency": "€7,946,959"
+	},
+	{
+		"address": "726-3170 Tortor Rd.",
+		"postalZip": "224816",
+		"region": "Baden Württemberg",
+		"latlng": "40.2096881664, -82.7316852736",
+		"country": "Indonesia",
+		"currency": "€8,120,401"
+	},
+	{
+		"address": "986-2069 Ullamcorper, Avenue",
+		"postalZip": "373420",
+		"region": "Swiętokrzyskie",
+		"latlng": "-86.9332916224, -13.0553962496",
+		"country": "South Africa",
+		"currency": "€1,807,276"
+	},
+	{
+		"address": "487-612 Placerat, Road",
+		"postalZip": "274288",
+		"region": "Riau",
+		"latlng": "30.2422253568, -70.774759936",
+		"country": "South Africa",
+		"currency": "€9,357,535"
+	},
+	{
+		"address": "4254 Rhoncus. Ave",
+		"postalZip": "32-586",
+		"region": "Bauchi",
+		"latlng": "43.086283776, 74.2318410752",
+		"country": "Poland",
+		"currency": "€3,264,080"
+	},
+	{
+		"address": "P.O. Box 389, 9299 Luctus Road",
+		"postalZip": "14622",
+		"region": "Roxburghshire",
+		"latlng": "-60.6920572928, -50.463648768",
+		"country": "Sweden",
+		"currency": "€1,588,690"
+	},
+	{
+		"address": "6288 In Road",
+		"postalZip": "7188",
+		"region": "Paraíba",
+		"latlng": "-53.498369536, -47.771850752",
+		"country": "China",
+		"currency": "€4,485,805"
+	},
+	{
+		"address": "3612 Et, Road",
+		"postalZip": "4829",
+		"region": "Nova Scotia",
+		"latlng": "-8.6072706048, -147.2044274688",
+		"country": "Mexico",
+		"currency": "€8,529,971"
+	},
+	{
+		"address": "397-5761 Non Rd.",
+		"postalZip": "12245",
+		"region": "Bắc Kạn",
+		"latlng": "1.6486122496, 157.2159210496",
+		"country": "Turkey",
+		"currency": "€2,403,305"
+	},
+	{
+		"address": "788-4441 Odio Avenue",
+		"postalZip": "685763",
+		"region": "Maranhão",
+		"latlng": "-56.85432832, 6.644851712",
+		"country": "China",
+		"currency": "€2,375,057"
+	},
+	{
+		"address": "357-534 Amet Road",
+		"postalZip": "5454",
+		"region": "Nova Scotia",
+		"latlng": "-82.694657536, 136.4928289792",
+		"country": "New Zealand",
+		"currency": "€2,192,290"
+	},
+	{
+		"address": "Ap #561-5785 Ut Rd.",
+		"postalZip": "3411",
+		"region": "Hampshire",
+		"latlng": "72.7745544192, -28.7170417664",
+		"country": "Indonesia",
+		"currency": "€4,558,420"
+	},
+	{
+		"address": "269-9970 Pulvinar Road",
+		"postalZip": "683932",
+		"region": "Piura",
+		"latlng": "42.7934687232, 84.783142912",
+		"country": "South Korea",
+		"currency": "€6,038,262"
+	},
+	{
+		"address": "873-5612 Elit, Ave",
+		"postalZip": "2648",
+		"region": "Ulster",
+		"latlng": "-11.126136832, 79.0074257408",
+		"country": "Turkey",
+		"currency": "€4,406,339"
+	},
+	{
+		"address": "P.O. Box 538, 1582 Cursus St.",
+		"postalZip": "703158",
+		"region": "British Columbia",
+		"latlng": "35.9401520128, -101.907452928",
+		"country": "China",
+		"currency": "€7,377,916"
+	},
+	{
+		"address": "P.O. Box 438, 1675 Massa. Rd.",
+		"postalZip": "8358",
+		"region": "Pskov Oblast",
+		"latlng": "-19.1191747584, 164.4090123264",
+		"country": "Peru",
+		"currency": "€8,342,559"
+	},
+	{
+		"address": "P.O. Box 466, 8696 Pede Avenue",
+		"postalZip": "5142",
+		"region": "Araucanía",
+		"latlng": "-8.2039023616, -38.5909261312",
+		"country": "Ireland",
+		"currency": "€7,936,773"
+	},
+	{
+		"address": "596-401 Dolor Av.",
+		"postalZip": "41732",
+		"region": "Antwerpen",
+		"latlng": "-23.7100773376, 83.613403136",
+		"country": "Canada",
+		"currency": "€8,958,169"
+	},
+	{
+		"address": "Ap #189-6828 Adipiscing St.",
+		"postalZip": "2266-3510",
+		"region": "South Chungcheong",
+		"latlng": "3.0656014336, -61.1056386048",
+		"country": "India",
+		"currency": "€5,948,543"
+	},
+	{
+		"address": "8194 Risus, Road",
+		"postalZip": "80-075",
+		"region": "Zaporizhzhia oblast",
+		"latlng": "44.5552776192, 41.9823415296",
+		"country": "Germany",
+		"currency": "€10,282,060"
+	},
+	{
+		"address": "Ap #371-9558 Sed Rd.",
+		"postalZip": "2144",
+		"region": "Nordrhein-Westphalen",
+		"latlng": "73.4786179072, -24.2462636032",
+		"country": "Brazil",
+		"currency": "€9,283,524"
+	},
+	{
+		"address": "Ap #737-9448 Id, Road",
+		"postalZip": "76301",
+		"region": "Dnipropetrovsk oblast",
+		"latlng": "64.4269902848, -62.5082201088",
+		"country": "India",
+		"currency": "€4,811,138"
+	},
+	{
+		"address": "772-4149 Ac Rd.",
+		"postalZip": "3371",
+		"region": "Rivers",
+		"latlng": "66.12, -101.6554759168",
+		"country": "South Africa",
+		"currency": "€9,583,565"
+	},
+	{
+		"address": "Ap #380-7147 Aliquam St.",
+		"postalZip": "46653",
+		"region": "Rio Grande do Sul",
+		"latlng": "-43.2295560192, 29.613127168",
+		"country": "Costa Rica",
+		"currency": "€8,355,711"
+	},
+	{
+		"address": "Ap #287-9905 Fermentum Rd.",
+		"postalZip": "301161",
+		"region": "La Rioja",
+		"latlng": "-42.4080509952, 48.0977778688",
+		"country": "China",
+		"currency": "€9,667,202"
+	},
+	{
+		"address": "976-1909 Morbi Av.",
+		"postalZip": "65561",
+		"region": "Kaduna",
+		"latlng": "77.2227083264, -56.7140395008",
+		"country": "New Zealand",
+		"currency": "€8,517,564"
+	},
+	{
+		"address": "Ap #611-2439 At Av.",
+		"postalZip": "2772",
+		"region": "San José",
+		"latlng": "-2.7873564672, 152.4943448064",
+		"country": "Ireland",
+		"currency": "€4,069,574"
+	},
+	{
+		"address": "Ap #935-3153 Adipiscing St.",
+		"postalZip": "5391",
+		"region": "Saskatchewan",
+		"latlng": "-41.6144979968, 77.2474959872",
+		"country": "Costa Rica",
+		"currency": "€1,157,470"
+	},
+	{
+		"address": "P.O. Box 236, 6709 Feugiat St.",
+		"postalZip": "26-63",
+		"region": "Aragón",
+		"latlng": "-68.7270800384, 115.9536329728",
+		"country": "India",
+		"currency": "€4,212,729"
+	},
+	{
+		"address": "3608 Odio. Street",
+		"postalZip": "8452",
+		"region": "Zhōngnán",
+		"latlng": "-26.7648285696, -139.5339807744",
+		"country": "China",
+		"currency": "€5,950,404"
+	},
+	{
+		"address": "P.O. Box 633, 1191 Nibh. St.",
+		"postalZip": "Q61 9FV",
+		"region": "Quảng Nam",
+		"latlng": "2.0048928768, 122.6808623104",
+		"country": "Sweden",
+		"currency": "€4,246,915"
+	},
+	{
+		"address": "Ap #160-8273 Suscipit St.",
+		"postalZip": "43261",
+		"region": "Poitou-Charentes",
+		"latlng": "-74.388872704, -134.307308544",
+		"country": "Chile",
+		"currency": "€10,626,986"
+	},
+	{
+		"address": "3078 Lorem St.",
+		"postalZip": "82318",
+		"region": "Huila",
+		"latlng": "76.5374104576, 139.9084934144",
+		"country": "New Zealand",
+		"currency": "€2,788,486"
+	},
+	{
+		"address": "370-1064 Lorem. Av.",
+		"postalZip": "20308",
+		"region": "Osun",
+		"latlng": "80.7123253248, -11.8034620416",
+		"country": "New Zealand",
+		"currency": "€7,510,432"
+	},
+	{
+		"address": "Ap #884-6801 Mattis Av.",
+		"postalZip": "43545",
+		"region": "Vestland",
+		"latlng": "78.031305728, 164.8651066368",
+		"country": "Philippines",
+		"currency": "€2,928,368"
+	},
+	{
+		"address": "2278 Leo, Avenue",
+		"postalZip": "235267",
+		"region": "Limón",
+		"latlng": "-58.293302272, -156.4219757568",
+		"country": "France",
+		"currency": "€9,092,599"
+	},
+	{
+		"address": "Ap #239-4490 Sed Avenue",
+		"postalZip": "72822",
+		"region": "Flevoland",
+		"latlng": "48.1610578944, 34.8637088768",
+		"country": "South Africa",
+		"currency": "€4,310,997"
+	},
+	{
+		"address": "810-7000 Egestas. Street",
+		"postalZip": "21653",
+		"region": "Pomorskie",
+		"latlng": "80.7910683648, 49.4367507456",
+		"country": "Mexico",
+		"currency": "€7,611,563"
+	},
+	{
+		"address": "Ap #182-3134 Magna Street",
+		"postalZip": "61155-81216",
+		"region": "Putumayo",
+		"latlng": "82.5457901568, -44.4886546432",
+		"country": "Canada",
+		"currency": "€3,164,303"
+	},
+	{
+		"address": "831-1405 Diam St.",
+		"postalZip": "2024",
+		"region": "Queensland",
+		"latlng": "-38.7195568128, 15.188582912",
+		"country": "Canada",
+		"currency": "€7,745,697"
+	},
+	{
+		"address": "Ap #176-2919 Sagittis. St.",
+		"postalZip": "31594509",
+		"region": "Liguria",
+		"latlng": "-56.9910423552, 64.78041344",
+		"country": "Belgium",
+		"currency": "€4,005,930"
+	},
+	{
+		"address": "Ap #610-5196 Volutpat Av.",
+		"postalZip": "969504",
+		"region": "New South Wales",
+		"latlng": "-38.821976064, -150.72482816",
+		"country": "Canada",
+		"currency": "€3,022,043"
+	},
+	{
+		"address": "6754 Morbi Ave",
+		"postalZip": "03585-32436",
+		"region": "Manitoba",
+		"latlng": "-23.1907007488, -11.2519640064",
+		"country": "Spain",
+		"currency": "€5,965,057"
+	},
+	{
+		"address": "8827 Nunc Road",
+		"postalZip": "48246",
+		"region": "Newfoundland and Labrador",
+		"latlng": "33.2822555648, 151.2524785664",
+		"country": "Belgium",
+		"currency": "€9,667,306"
+	},
+	{
+		"address": "100-5164 Et Road",
+		"postalZip": "15851",
+		"region": "Västra Götalands län",
+		"latlng": "78.5940170752, 63.0006119424",
+		"country": "Nigeria",
+		"currency": "€10,339,062"
+	},
+	{
+		"address": "9622 Nulla St.",
+		"postalZip": "64895",
+		"region": "Upper Austria",
+		"latlng": "-51.9957062656, 73.6097795072",
+		"country": "India",
+		"currency": "€9,052,708"
+	},
+	{
+		"address": "Ap #332-8090 Hymenaeos. Rd.",
+		"postalZip": "44785",
+		"region": "Paraná",
+		"latlng": "34.822673408, -130.6451160064",
+		"country": "Singapore",
+		"currency": "€8,226,119"
+	},
+	{
+		"address": "Ap #761-2413 Integer Av.",
+		"postalZip": "QY8Q 4JH",
+		"region": "Connacht",
+		"latlng": "31.1399369728, 77.213940736",
+		"country": "Philippines",
+		"currency": "€1,529,636"
+	},
+	{
+		"address": "Ap #638-8204 Arcu. Av.",
+		"postalZip": "10658",
+		"region": "Khánh Hòa",
+		"latlng": "64.3088553984, -29.4552476672",
+		"country": "Belgium",
+		"currency": "€10,973,377"
+	},
+	{
+		"address": "677-4334 Ligula. Avenue",
+		"postalZip": "3883",
+		"region": "Haryana",
+		"latlng": "20.403632128, 170.2737547264",
+		"country": "South Africa",
+		"currency": "€10,951,438"
+	},
+	{
+		"address": "Ap #623-7310 Nec Street",
+		"postalZip": "58814-461",
+		"region": "Veracruz",
+		"latlng": "-46.4811082752, -128.251739136",
+		"country": "Australia",
+		"currency": "€1,427,849"
+	},
+	{
+		"address": "3120 Elementum St.",
+		"postalZip": "65306-186",
+		"region": "South Island",
+		"latlng": "-17.323604992, -99.3892129792",
+		"country": "South Africa",
+		"currency": "€6,051,778"
+	},
+	{
+		"address": "242-9196 Sapien Street",
+		"postalZip": "30716",
+		"region": "Pará",
+		"latlng": "34.1922197504, 58.593183232",
+		"country": "Singapore",
+		"currency": "€9,280,547"
+	},
+	{
+		"address": "836-8587 Consequat, Street",
+		"postalZip": "27867",
+		"region": "Central Visayas",
+		"latlng": "-1.8777739264, 65.1447406592",
+		"country": "Netherlands",
+		"currency": "€5,191,569"
+	},
+	{
+		"address": "Ap #186-629 A, Av.",
+		"postalZip": "YW3 8UY",
+		"region": "Central Region",
+		"latlng": "19.0204084224, 73.533833216",
+		"country": "South Korea",
+		"currency": "€3,485,272"
+	},
+	{
+		"address": "885-8446 Libero Rd.",
+		"postalZip": "437676",
+		"region": "Tây Ninh",
+		"latlng": "-73.8119626752, -94.0414830592",
+		"country": "Australia",
+		"currency": "€5,232,023"
+	},
+	{
+		"address": "117-4220 Facilisis. Avenue",
+		"postalZip": "32338",
+		"region": "Mpumalanga",
+		"latlng": "28.3432139776, -135.3961711616",
+		"country": "Russian Federation",
+		"currency": "€8,067,604"
+	},
+	{
+		"address": "P.O. Box 884, 4083 Auctor, Street",
+		"postalZip": "25166",
+		"region": "Sachsen-Anhalt",
+		"latlng": "-2.1757694976, 68.767282688",
+		"country": "Ukraine",
+		"currency": "€1,793,339"
+	},
+	{
+		"address": "Ap #985-1798 Eleifend Street",
+		"postalZip": "158758",
+		"region": "Euskadi",
+		"latlng": "-54.6865297408, -13.2059546624",
+		"country": "Chile",
+		"currency": "€10,673,266"
+	},
+	{
+		"address": "Ap #903-8806 Ac Street",
+		"postalZip": "52-33",
+		"region": "Azad Kashmir",
+		"latlng": "-60.1405241344, 152.7426061312",
+		"country": "United Kingdom",
+		"currency": "€1,838,643"
+	},
+	{
+		"address": "680-5745 Libero. St.",
+		"postalZip": "50110",
+		"region": "Risaralda",
+		"latlng": "13.9720416256, 11.8041213952",
+		"country": "Indonesia",
+		"currency": "€4,408,408"
+	},
+	{
+		"address": "555-1857 Ullamcorper St.",
+		"postalZip": "885512",
+		"region": "Atacama",
+		"latlng": "-45.4677312512, -53.6188201984",
+		"country": "South Korea",
+		"currency": "€3,153,502"
+	},
+	{
+		"address": "Ap #993-482 Vitae St.",
+		"postalZip": "6141-5355",
+		"region": "Huádōng",
+		"latlng": "32.3641730048, 135.9516517376",
+		"country": "Ukraine",
+		"currency": "€3,442,365"
+	},
+	{
+		"address": "P.O. Box 881, 716 Aenean Rd.",
+		"postalZip": "827431",
+		"region": "Wyoming",
+		"latlng": "68.0414989312, -137.3846289408",
+		"country": "Australia",
+		"currency": "€6,383,481"
+	},
+	{
+		"address": "8213 Eu Ave",
+		"postalZip": "46714",
+		"region": "Brandenburg",
+		"latlng": "23.7995275264, 70.209634304",
+		"country": "Philippines",
+		"currency": "€6,057,121"
+	},
+	{
+		"address": "P.O. Box 952, 4535 Justo St.",
+		"postalZip": "335885",
+		"region": "Punjab",
+		"latlng": "-38.8149687296, 49.1761504256",
+		"country": "Singapore",
+		"currency": "€1,050,550"
+	},
+	{
+		"address": "Ap #823-8388 Nam Ave",
+		"postalZip": "61-552",
+		"region": "Cauca",
+		"latlng": "-67.0982095872, 157.7581549568",
+		"country": "Canada",
+		"currency": "€8,176,284"
+	},
+	{
+		"address": "609-5441 Dictum St.",
+		"postalZip": "77536",
+		"region": "łódzkie",
+		"latlng": "77.690940416, 109.174096384",
+		"country": "Sweden",
+		"currency": "€8,033,842"
+	},
+	{
+		"address": "3812 Ligula. Ave",
+		"postalZip": "264415",
+		"region": "Risaralda",
+		"latlng": "82.7484191744, 2.6449896448",
+		"country": "Philippines",
+		"currency": "€1,417,789"
+	},
+	{
+		"address": "Ap #968-4180 Hendrerit Ave",
+		"postalZip": "743382",
+		"region": "Balıkesir",
+		"latlng": "-8.303282176, 106.9625141248",
+		"country": "Poland",
+		"currency": "€7,657,810"
+	},
+	{
+		"address": "Ap #978-932 Vel, Rd.",
+		"postalZip": "22-339",
+		"region": "Munster",
+		"latlng": "-72.6870998016, -1.46767616",
+		"country": "Peru",
+		"currency": "€9,854,293"
+	},
+	{
+		"address": "282-5715 Quis St.",
+		"postalZip": "1396-2863",
+		"region": "Catalunya",
+		"latlng": "6.8901644288, 59.4704689152",
+		"country": "Vietnam",
+		"currency": "€1,785,088"
+	},
+	{
+		"address": "415-930 Vestibulum Road",
+		"postalZip": "99450",
+		"region": "Ulster",
+		"latlng": "-77.6088338432, -58.3785612288",
+		"country": "India",
+		"currency": "€4,718,078"
+	},
+	{
+		"address": "Ap #478-9245 Lacus. Avenue",
+		"postalZip": "978393",
+		"region": "North Chungcheong",
+		"latlng": "-75.7062221824, 35.3102240768",
+		"country": "Peru",
+		"currency": "€2,518,324"
+	},
+	{
+		"address": "7267 Varius St.",
+		"postalZip": "581239",
+		"region": "San José",
+		"latlng": "47.3254173696, 132.9940731904",
+		"country": "Singapore",
+		"currency": "€5,230,732"
+	},
+	{
+		"address": "468-8024 Sit Avenue",
+		"postalZip": "7669",
+		"region": "Östergötlands län",
+		"latlng": "-8.5784247296, 22.393747456",
+		"country": "China",
+		"currency": "€5,540,538"
+	},
+	{
+		"address": "Ap #408-2677 Ac St.",
+		"postalZip": "2174 KH",
+		"region": "Rio de Janeiro",
+		"latlng": "-63.879986688, 14.5288665088",
+		"country": "India",
+		"currency": "€8,536,983"
+	},
+	{
+		"address": "Ap #457-6195 Lobortis St.",
+		"postalZip": "74771",
+		"region": "Murcia",
+		"latlng": "-88.7247773696, -31.340050944",
+		"country": "United Kingdom",
+		"currency": "€10,285,696"
+	},
+	{
+		"address": "788-2827 Eget Ave",
+		"postalZip": "269667",
+		"region": "Friesland",
+		"latlng": "-23.2420232192, -149.400195072",
+		"country": "Australia",
+		"currency": "€1,100,579"
+	},
+	{
+		"address": "Ap #832-9480 Leo. Ave",
+		"postalZip": "125568",
+		"region": "Noord Brabant",
+		"latlng": "-60.2911367168, -115.2914255872",
+		"country": "Russian Federation",
+		"currency": "€3,588,331"
+	},
+	{
+		"address": "Ap #731-8138 Dictum St.",
+		"postalZip": "56838",
+		"region": "Bahia",
+		"latlng": "-84.507906048, 111.7640797184",
+		"country": "Australia",
+		"currency": "€7,061,853"
+	},
+	{
+		"address": "Ap #955-4226 Primis Ave",
+		"postalZip": "3679",
+		"region": "South Gyeongsang",
+		"latlng": "73.1106917376, -149.450744832",
+		"country": "Brazil",
+		"currency": "€5,520,324"
+	},
+	{
+		"address": "P.O. Box 517, 4193 Eleifend Avenue",
+		"postalZip": "36538",
+		"region": "Hidalgo",
+		"latlng": "-34.9840149504, 173.4821732352",
+		"country": "Philippines",
+		"currency": "€7,842,540"
+	},
+	{
+		"address": "772-9639 Mus. Avenue",
+		"postalZip": "837414",
+		"region": "Ulster",
+		"latlng": "26.1246527488, -39.3264529408",
+		"country": "Ukraine",
+		"currency": "€9,382,944"
+	}
+]
