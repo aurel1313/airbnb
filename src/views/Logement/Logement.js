@@ -1,13 +1,9 @@
-import React from "react"
-import './Logement.scss'
-import { List } from "../../Component/List/List"
+import React from "react";
+import { List } from "../../Component/List/List";
+import './Logement.scss';
 export const Logement = () => {
     
-        fetch('')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-            })
+   
 
             const style={
                 display:"flex",
