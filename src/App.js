@@ -1,8 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import React from 'react';
+import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import store from './app/store';
 import { Connexion } from './views/Connexion/Connexion';
 import { Container } from './views/Container/Container';
 import { Header } from './views/Header/Header';
@@ -15,7 +17,6 @@ import Notifications from './views/Notification/Notifications';
 import { Reservation } from './views/Reservations/Reservation';
 function App() {
   
-
   
   // Initialize Firebase
  
@@ -25,7 +26,7 @@ function App() {
  
   return (
     <div className="App" style={style}>
-        
+        <Provider store={store}>
         <Header/>,
        
         
@@ -48,6 +49,7 @@ function App() {
                 <Route path="hebergement/hebergementDetail/:id/reservation" element={<Reservation/>} />
                 <Route path="logement/logementDetail/:id" element={<LogementDetail/>}/>
       </Routes>
+      </Provider>
     </div>
   );
 }

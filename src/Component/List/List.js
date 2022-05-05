@@ -43,7 +43,7 @@ const fetchData2 = () => {
             
             <div className="items" key={index}>
               <img src={item.fields.xl_picture_url} width="300" height="300" alt="miss photo"/>
-              <Link to={`/logement/logementDetail/${item.fields.id}`}>test</Link>
+              <Link to={`/logement/logementDetail/${item.fields.id}`}>voir plus</Link>
               </div>
               
           ))}
