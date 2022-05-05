@@ -1,19 +1,16 @@
-import React from "react"
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import React, { useState } from "react"
 import { auth } from "../../config/Firebase/Firebase"
 import './Connexion.scss'
-import { useState } from "react"
-import { onAuthStateChanged } from "firebase/auth"
-import { signOut } from "firebase/auth"
-import { signInWithEmailAndPassword } from "firebase/auth"
 export const Connexion = () => {
     const[loginEmail,setLoginEmail]=useState('');
     const[loginPassword,setLoginPassword]=useState('');
-    const [user,setUser] = useState({});
+  const [user,setUser] = useState({});
     
     onAuthStateChanged(auth,(currentUser)=>{
         setUser(currentUser);
     })
-    console.log(auth)
+    
     const style={
         background:'white'
     }
