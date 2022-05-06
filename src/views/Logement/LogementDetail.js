@@ -9,12 +9,12 @@ export const LogementDetail = ()=>{
     }
     const redux = useSelector((state)=>state.data)
     const {id} =useParams()
-    console.log(id)
+    
     const datas = redux.value.records
     
     const data = datas.find((data)=>data)
     const json = JSON.parse(localStorage.getItem('user'))
-    console.log(data)
+   
         /*datas.map((data)=>{
             if(data.fields.id===id){
                 console.log(data)
@@ -36,7 +36,7 @@ export const LogementDetail = ()=>{
         boxShadow:'0px 0px 10px black',
         borderRadius:'10px',
     }
-   
+ 
     return (
         <div style={style}>
             <h1>Logement Detail</h1>

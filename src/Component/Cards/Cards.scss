@@ -1,8 +1,10 @@
-.items{
+.card{
     display: flex;
-    
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: end;
+    height: 70rem;
+    margin-left: 12rem;
+    width: 80vw;
 }
 .name{
     white-space: pre-wrap;

@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { HebergementDetail } from '../../views/Hebergement/HebergementDetails';
 import './Cards.scss';
-import React from 'react';
 export const Cards = (data) => {
     const[click,isOnclick]=useState(false);
     const [visible,setVisible]=useState(true);
@@ -27,7 +26,7 @@ export const Cards = (data) => {
     
     return (
         
-        <div className="items" visible={visible}>
+        <div className='card' visible={visible}>
             
             { visible ==true  && location.pathname=="/hebergement" && data.data.map((item,index)=>{
                 
