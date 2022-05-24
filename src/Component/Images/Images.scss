@@ -2,8 +2,7 @@ img{
     border-radius: 5px;
 }
 p{
-    position: relative;
-    bottom:6rem;
+  
     color:white;
     font-weight: 700;
     font-size: 18px;
@@ -26,13 +25,19 @@ font-weight: 500;
 }
 
 .button{
-    position: relative;
-    bottom: 5rem;
+   
   align-self: center;
   background:white;
   border-radius: 20px;
   font-size: 18px;
   width: 10rem;
-  height: 5rem;
+  height: 2rem;
  
+}
+.content{
+   position: absolute;
+   top:20rem;
+   margin-left:45%;
+    
+   
 }

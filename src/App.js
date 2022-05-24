@@ -26,12 +26,16 @@ function App() {
  
   return (
     <div className="App" style={style}>
+      
         <Provider store={store}>
+        
         <Header/>,
+       
        
         
         <Routes>
           <Route path="/" element={<Container/>}/>
+          
           <Route path="logement" element={<Logement/>}>
         
           </Route>
@@ -49,6 +53,7 @@ function App() {
                 <Route path="hebergement/hebergementDetail/:id/reservation" element={<Reservation/>} />
                 <Route path="logement/logementDetail/:id" element={<LogementDetail/>}/>
       </Routes>
+   
       </Provider>
     </div>
   );

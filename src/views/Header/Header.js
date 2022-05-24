@@ -1,12 +1,9 @@
-import { useReducer, useState } from "react"
+import React, { useState } from "react"
 import { BsGlobe } from 'react-icons/bs'
 import { Link } from "react-router-dom"
 import { Links } from "../../Component/Links/Links"
 import { SearchBar } from "../../Component/SearchBar/SearchBar"
-import { Sidebars } from "../../Component/Sidebar/Sidebars"
-import React from "react"
 import './Header.scss'
-import { auth } from "../../config/Firebase/Firebase"
 export const Header = () => {
     const[state,setState]=useState(false)
     
@@ -19,12 +16,12 @@ export const Header = () => {
         <header className="header">
             
            
-           <div className="nav-wrapper black " style={style} >
-           <img src="https://img.icons8.com/color/48/000000/airbnb.png" className="left" alt=""/>
-           <p className="text-white left mt-1 fw-bold fs-4 ms-3">AirHotel</p>
+           <div className="nav-wrapper black " style={style} id="navigation">
+           <img src="https://img.icons8.com/color/48/000000/airbnb.png" className="left mt-3" alt=""/>
+           <p className="text-white left mt-4 fw-bold fs-4 ms-3">AirHotel</p>
            <ul className="navigation">
                 <li className="links">
-                    <Link to="/">Accueil</Link>
+                    <Link to="/" className="mt-2 text-white me-5 bd-highlight">Accueil</Link>
                     <Link to="/hebergement" className="mt-2 text-white me-5 bd-highlight" text="hebergement" >hebergement</Link>
                     
                     <Links redirect="#" className="mt-2 text-white me-5  bd-highlight" text="voyages" />
@@ -42,7 +39,7 @@ export const Header = () => {
                     
                {localStorage.getItem('user')&& <Link to="" className="text-white">{json.user.email}</Link>}  
                 </li>
-                <Sidebars />
+                
            </ul>
               
             </div> 

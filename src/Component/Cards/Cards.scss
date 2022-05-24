@@ -1,15 +1,14 @@
-.card{
+.cards{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 70rem;
+    height: 30rem;
     margin-left: 12rem;
     width: 80vw;
 }
 .name{
-    white-space: pre-wrap;
-    word-break: break-word;
-}
-.img{
-    margin-top:2rem;
+    //white-space: pre-wrap;
+    //word-break: break-word;
+    //position: absolute;
+    //margin-left: -10rem;
 }

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import StylishSidebar from 'stylish-sidebar';
 import Setting from '../../assets/imgs/gear.svg';
 import Notification from '../../assets/imgs/notifications.svg';
+
 export const Sidebars = () => {
     const backgroundImage =false;
     const [show, setShow] = useState(false);
@@ -91,7 +92,7 @@ const header={
                
             
             
-                <StylishSidebar maxWidth="10rem" widthExpand="10%" backgroundImage={backgroundImage}  menuItems={menuItems}   header={header} isOpen={false} colorPalette={paletteColor} onMenuItemClick={handleMenuItemClick}   />
+                <StylishSidebar  maxWidth="10rem" widthExpand="10%" backgroundImage={backgroundImage}  menuItems={menuItems}  header={header} isOpen={false} colorPalette={paletteColor} onMenuItemClick={handleMenuItemClick}   />
                
               
                

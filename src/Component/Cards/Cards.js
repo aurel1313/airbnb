@@ -16,6 +16,7 @@ export const Cards = (data) => {
         display:"flex",
         flexDirection:"column",
         alignItems:"center",
+        marginTop:"5rem"
        
         
     }
@@ -26,23 +27,34 @@ export const Cards = (data) => {
     
     return (
         
-        <div className='card' visible={visible}>
+        <div className='cards' visible={visible}>
             
             { visible ==true  && location.pathname=="/hebergement" && data.data.map((item,index)=>{
                 
                 return(
                     <div key={index}  style={style}>
-                        <strong className='name'>{item.name}</strong>
-                        <img src={item.imageUrl} alt="image" height="200" width="200" className='img'/>
-                        
-                        
-                        <Link to={`hebergementDetail/${item.id}`} className="btn-primary">Link</Link>
+                        <div>
+                       {/* <strong className='name'>{item.name}</strong>/**/} 
+                            <img src={item.imageUrl} alt="image" height="300" width="300" className='img'/>
+                        </div> 
+                      <div>
+                        <Link to={`hebergementDetail/${item.id}`} >{item.name}</Link>
+                      </div>
+                        {/*<Link to={`hebergementDetail/${item.id}`} className="btn-primary">{item.name}</Link>/**/}
                         
                     </div>
                    
+                   
                 )
+
+               
                   
             })}
+            
+            
+
+            
+
          {location.pathname=='/hebergement/hebergementDetail/'+id && <HebergementDetail data={data}/>}
         
              
