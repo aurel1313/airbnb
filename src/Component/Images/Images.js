@@ -7,7 +7,7 @@ export const Images = ({visible,setVisible,...props}) => {
         <div className="card" style={props.style}>
             <img src={props.src} alt={props.alt} style={props.style}/>
           <div className="content"> 
-            <p>{props.text}</p>
+            <p className="text">{props.text}</p>
             {
                 visible===false?<div className="button" style={{display:"none"}}>
                     <Link className="more" to="/logement"  onClick={props.onClick}  >Details</Link>

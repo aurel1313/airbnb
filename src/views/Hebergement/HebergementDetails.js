@@ -1,6 +1,6 @@
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { Button, Snackbar } from '@mui/material';
+import React from 'react';
 import { Link, useLocation, useParams } from "react-router-dom";
-import React  from 'react';
 import './HebergementDetails.scss';
 export const HebergementDetail = (data,props) => {
     let location = useLocation();
@@ -11,37 +11,55 @@ export const HebergementDetail = (data,props) => {
          img.style.transform="scale(1.5)";
 
    }
+   const [open,setOpen]=React.useState(false);
+   const handleClick=()=>{
+         setOpen(true);
+   }
+   const handleClose=()=>{
+            setOpen(false);
+   }
     // "AIzaSyAcaImITkQU2WvI6GfMcLTw8KsmyUzDF6o"//
     return (
         <div className="detailsHebergement">
-            <h1>HebergementDetail</h1>
+            <h1>details de l'hebergement</h1>
             <Link to="/hebergement" >Retour</Link>
             
             {
                /* Fetching the data from the API and displaying the data in the details section. */
                 data.data.data.map((item,index)=>{
                     if(item.id==id){
+                        {console.log(item)}
                         return(
                             <div key={index} className="details">
-                                <strong>{item.name}</strong>
-                                <p>Le prix de l'hebergement: {item.price}{item.priceCurrency} par nuit</p>
-                                <img src={item.imageUrl} alt="image" height="200" width="200" className='imgDetails' onClick={()=>angrandissementImage()} id="img"/>
+                                 <strong className='strong'>{item.name}</strong>
+                             <div className='main'>
+                               
+                               <div>
+                                    <img src={item.imageUrl} alt="image" height="500" width="800" className='imgDetails' onClick={()=>angrandissementImage()} id="img"/>
+                               </div>
+                               
                                 
                                 
-                                <div id="map">
-                                  <LoadScript googleMapsApiKey="AIzaSyAjelGkVsDOvlBHlglJf4pTEHw_GYfuVjo">
-                                    <GoogleMap
-                                        mapContainerStyle={{ height: "200px", width: "400px" }}
-                                        zoom={8}
-                                        center={{ lat: item.lat, lng: item.lng }}
-                                    >
-                                    </GoogleMap>
-                                    </LoadScript>
-                                </div>
-                                {console.log(id)}
-                                <Link to={`/hebergement/hebergementDetail/${id}/reservation`} className="reservation" >Reserver</Link>
+                               <div className='paiement'>
+                                     <div className='reserver'>
+                                             <p style={{color:"black"}}>Le prix de l'hebergement: <strong>{item.price}{item.priceCurrency}</strong> par nuit</p>
+                                             <Button onClick={handleClick} variant ="contained">reservation schedule is coming</Button>
+                                             <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} message="calendrier de reservation bientot disponible"/>
+                                             <div className='reserve'>
+                                                 
+                                                <Link to={`/hebergement/hebergementDetail/${id}/reservation`} className="reservation" >Reserver</Link>
+                                             </div>
+                                            
+                                    </div>
+                                   
+                                </div>  
+                               
+                              
                                 
                                 
+                            </div>
+                                
+                               
                             </div>
                             
                         )
