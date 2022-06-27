@@ -2,10 +2,12 @@
   "name": "booking-clone",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
     "@coreui/icons": "^3.0.0-alpha.0",
     "@coreui/icons-react": "^2.0.1",
     "@coreui/react": "^4.1.2",
+    "@dropzone-ui/react": "^6.7.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
@@ -47,6 +49,7 @@
     "react-easy-infinite-scroll": "^0.1.6",
     "react-hook-form": "^7.30.0",
     "react-icons": "^4.3.1",
+    "react-images-upload": "^1.2.8",
     "react-infinite-scroll-component": "^6.1.0",
     "react-infinite-scroll-hook": "^4.0.3",
     "react-infinite-scroller": "^1.2.6",
@@ -55,19 +58,20 @@
     "react-pro-sidebar": "^0.7.1",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.4",
     "react-sidebar-web": "0.0.16-beta",
     "sass": "^1.49.9",
     "skpm": "^1.3.2",
     "stream": "0.0.2",
     "stylish-sidebar": "^1.1.2",
+    "use-file-upload": "^1.0.11",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.17",
     "yuidocjs": "^0.10.2",
     "zlib": "^1.0.5"
   },
   "scripts": {
-    "start": "react-scripts  start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -94,5 +98,6 @@
     "@faker-js/faker": "^6.2.0",
     "jest": "^27.5.1",
     "prettier": "2.5.1"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }

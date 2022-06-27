@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\J2EE"
+		}
+	],
+	"settings": {
+		"docwriter.progress.trackFunctions": false,
+		"docwriter.progress.trackClasses": true,
+		"docwriter.progress.trackMethods": false
+	}
+}

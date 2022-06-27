@@ -1,7 +1,7 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { Button } from "../Button/Button"
 import { Modal } from "../Modal/Modal"
-import React from "react"
+import './Input.scss'
 export const Input = (props) => {
     const style={
         height:"50px",
@@ -27,6 +27,14 @@ export const Input = (props) => {
             }
             <Button onClick={()=>setVisible(false)} children ="close"/>
             
+        </div>
+    )
+}
+export const Input2 = (props) => {
+    return(
+        <div className="input-label" >
+            <input type={props.type} id={props.id} className={props.className} onChange={props.onChange} value={props.value} style={props.style} />
+            <label className={props.labelClassName} htmlFor={props.id}>{props.label}</label>
         </div>
     )
 }

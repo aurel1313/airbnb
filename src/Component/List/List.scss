@@ -7,21 +7,29 @@
     justify-content: space-between;
 }
 .items{
-    display:grid;
-    justify-content: center;
-    border: 1px solid black;
+    display: inline-block;
+    
     height: 30rem;
     width: 25rem;
     margin-top: 5rem;
+    margin-left: 5rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .infinite{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+   
     margin-left: 7rem;
     height: 30rem;
     width: 95rem;
     margin-top: 5rem;
     
+}
+.photo{
+    height: 30rem;
+    width: 25rem;
+}
+.ajout{
+    background:linear-gradient(to left, #E61E4D,#D70466);
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    color: white;
 }
