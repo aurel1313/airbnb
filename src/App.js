@@ -15,6 +15,7 @@ import { Logement } from './views/Logement/Logement';
 import { LogementDetail } from './views/Logement/LogementDetail';
 import Notifications from './views/Notification/Notifications';
 import { Reservation } from './views/Reservations/Reservation';
+import { LogementAjout } from './views/Logement/LogementAjout';
 function App() {
   
   
@@ -52,6 +53,7 @@ function App() {
             
                 <Route path="hebergement/hebergementDetail/:id/reservation" element={<Reservation/>} />
                 <Route path="logement/logementDetail/:id" element={<LogementDetail/>}/>
+                <Route path ="logement/logementAjout" element={<LogementAjout/>}/>
       </Routes>
    
       </Provider>

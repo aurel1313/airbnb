@@ -1,6 +1,7 @@
 import React from "react";
 import { List } from "../../Component/List/List";
 import './Logement.scss';
+
 export const Logement = () => {
     
    

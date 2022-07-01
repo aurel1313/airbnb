@@ -27,19 +27,19 @@ const fetchData2 = () => {
     });
   }, 500);
 };
-
+const json = JSON.parse(localStorage.getItem('user'))
+console.log(json.user)
 
     return (
      <div >
             <h1>Liste des logements</h1>
         
-       <div  >
+       <div className="infinite">
        
-         <InfiniteScroll dataLength={data3.records.length}  totalRecord={5} next={fetchData2} hasMore={true}
-   className="infinite"  >
+      
          
          
-          {data.records.map((item, index) => (
+          {data3.records.map((item, index) => (
             
             <div className="items" key={index}>
               <img src={item.fields.xl_picture_url} width="300" height="300" alt="miss photo"/>
@@ -47,8 +47,8 @@ const fetchData2 = () => {
               </div>
               
           ))}
-         </InfiniteScroll>
-         
+        
+         {json && json.user.email ==="aurelienfabre439@gmail.com" && <Link className="ajout" to="/logement/logementAjout">Ajouter un logement</Link>}
        </div>
        
      </div>
