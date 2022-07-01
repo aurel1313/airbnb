@@ -11,6 +11,7 @@ import { Header } from './views/Header/Header';
 import { Hebergement } from './views/Hebergement/Hebergement';
 import { HebergementDetail } from './views/Hebergement/HebergementDetails';
 import { Inscription } from './views/Inscription/Inscription';
+import { AjoutLogement } from './views/Logement/AjoutLogement';
 import { Logement } from './views/Logement/Logement';
 import { LogementDetail } from './views/Logement/LogementDetail';
 import Notifications from './views/Notification/Notifications';
@@ -37,9 +38,10 @@ function App() {
           <Route path="/" element={<Container/>}/>
           
           <Route path="logement" element={<Logement/>}>
+              
         
           </Route>
-         
+          <Route path="logement/ajouterLogement" element={<AjoutLogement/>}/>
           <Route path="inscription" element={<Inscription />} />
           <Route path="connexion" element={<Connexion/>}/>
           <Route path="notification" element={<Notifications/>}/>
