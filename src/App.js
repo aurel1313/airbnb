@@ -16,6 +16,7 @@ import { LogementDetail } from './views/Logement/LogementDetail';
 import Notifications from './views/Notification/Notifications';
 import { Reservation } from './views/Reservations/Reservation';
 import { LogementAjout } from './views/Logement/LogementAjout';
+import { Account } from './views/Account/Account';
 function App() {
   
   
@@ -43,6 +44,7 @@ function App() {
          
           <Route path="inscription" element={<Inscription />} />
           <Route path="connexion" element={<Connexion/>}/>
+          <Route path ="account" element={<Account/>}/>
           <Route path="notification" element={<Notifications/>}/>
            <Route path="hebergement" element={<Hebergement />} >
               <Route path="hebergementDetail/:id" element={<HebergementDetail />} />

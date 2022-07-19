@@ -37,7 +37,7 @@ export const Header = () => {
                    {/*console.log(json.user.email)*/}
                     <Link to="/connexion" className="text-white" text="Connexion" >Connexion</Link>
                     
-               {localStorage.getItem('user')&& <Link to="" className="text-white">{json.user.email}</Link>}  
+               {localStorage.getItem('user')&& <Link to="/account" className="text-white">{json.user.email}</Link>}  
                 </li>
                 
            </ul>
