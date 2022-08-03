@@ -55,7 +55,7 @@
     "react-pro-sidebar": "^0.7.1",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^3.4.4",
     "react-sidebar-web": "0.0.16-beta",
     "react-switch": "^7.0.0",
     "sass": "^1.49.9",
@@ -69,7 +69,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
