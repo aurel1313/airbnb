@@ -53,7 +53,7 @@ export const Connexion = () => {
                 {auth.currentUser ? <p>{user?.email}</p> : <p>pas connecté</p>}
             </div>
 }
-            <button onClick={logout}>deconnexion</button>
+            <button onClick={logout}>deconnexion</button> 
         </div>
     </div>
     )
