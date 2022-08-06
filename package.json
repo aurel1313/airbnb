@@ -65,21 +65,12 @@
     "skpm": "^1.3.2",
     "stream": "0.0.2",
     "stylish-sidebar": "^1.1.2",
-<<<<<<< HEAD
-    "use-file-upload": "^1.0.11",
-    "web-vitals": "^2.1.4",
-=======
->>>>>>> main
     "yarn": "^1.22.17",
     "yuidocjs": "^0.10.2",
     "zlib": "^1.0.5"
   },
   "scripts": {
-<<<<<<< HEAD
-    "start": "react-scripts start",
-=======
     "start": "react-scripts --openssl-legacy-provider start",
->>>>>>> main
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -105,12 +96,8 @@
   "devDependencies": {
     "@faker-js/faker": "^6.2.0",
     "jest": "^27.5.1",
-<<<<<<< HEAD
-    "prettier": "2.5.1"
-=======
     "prettier": "2.5.1",
     "web-vitals": "^2.1.4"
->>>>>>> main
   },
   "proxy": "http://localhost:5000"
 }
