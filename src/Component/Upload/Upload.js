@@ -2,7 +2,7 @@
 import { default as React, useEffect } from "react";
 import { useFileUpload } from 'use-file-upload'
 export const Upload = () => {
-    const [file, selectFile] = useFileUpload()
+    const [file, selectFile] = useFileUpload();
  
    useEffect(() => {
     if(file) {
