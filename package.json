@@ -62,13 +62,13 @@
     "skpm": "^1.3.2",
     "stream": "0.0.2",
     "stylish-sidebar": "^1.1.2",
-    "web-vitals": "^2.1.4",
     "yarn": "^1.22.17",
     "yuidocjs": "^0.10.2",
     "zlib": "^1.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -93,7 +93,8 @@
   "devDependencies": {
     "@faker-js/faker": "^6.2.0",
     "jest": "^27.5.1",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "web-vitals": "^2.1.4"
   },
   "proxy": "http://localhost:5000"
 }

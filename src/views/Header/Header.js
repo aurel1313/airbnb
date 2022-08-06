@@ -51,7 +51,7 @@ export const Header = () => {
 
                     <div className="theme-button">
                         <label className="text-white" >Theme</label> 
-                        <Switch checked={themes === 'dark'} onChange={(e)=>setTheme(e.target.checked ? 'dark':'light')}/>
+                        <Switch />
                     </div> 
                 </li>
                 
