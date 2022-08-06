@@ -8,8 +8,6 @@ export const List =()=>{
   const [data, setData] = React.useState(data3);
   const {id}=useParams();
   let location = useLocation();
-<<<<<<< HEAD
-=======
  console.log(location.pathname)
  console.log(location.pathname=='/logement/logementDetail/'+id)
   /*const fetchData = () => {
@@ -29,10 +27,7 @@ const fetchData2 = () => {
   }, 500);
 };
 const json = JSON.parse(localStorage.getItem('user'))
-console.log(json.user)
->>>>>>> main
 
- const json = JSON.parse(localStorage.getItem('user'));
  console.log(json?.user)
     return (
      <div >
@@ -40,11 +35,7 @@ console.log(json.user)
         
        <div className="infinite">
        
-<<<<<<< HEAD
-         
-=======
       
->>>>>>> main
          
          
           {data3.records.map((item, index) => (
@@ -57,13 +48,8 @@ console.log(json.user)
               </div>
               
           ))}
-<<<<<<< HEAD
-        {json && json.user.email=="aurelienfabre439@gmail.com" && <Link to="/logement/ajouterLogement" className="ajout">Ajouter un logement</Link>}
-         
-=======
         
          {json && json.user.email ==="aurelienfabre439@gmail.com" && <Link className="ajout" to="/logement/logementAjout">Ajouter un logement</Link>}
->>>>>>> main
        </div>
        
      </div>

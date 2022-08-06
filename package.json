@@ -2,7 +2,6 @@
   "name": "booking-clone",
   "version": "0.1.0",
   "private": true,
-  
   "dependencies": {
     "@coreui/icons": "^3.0.0-alpha.0",
     "@coreui/icons-react": "^2.0.1",
@@ -65,6 +64,7 @@
     "skpm": "^1.3.2",
     "stream": "0.0.2",
     "stylish-sidebar": "^1.1.2",
+    "use-file-upload": "^1.0.11",
     "yarn": "^1.22.17",
     "yuidocjs": "^0.10.2",
     "zlib": "^1.0.5"
