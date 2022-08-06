@@ -8,7 +8,7 @@ import { useContext } from "react"
 import { ThemeContext } from "../../App"
 import Switch from "react-switch";
 export const Header = () => {
-    const[state,setState]=useState(false)
+    const[state,setState]=useState(false);
 
     
     const style={
