@@ -1,0 +1,22 @@
+.account-infos{
+   border:  1px solid white;
+   box-shadow:  0 0 10px rgba(0,0,0,0.5);
+   height: 10rem;
+   margin-top: 5rem;
+   width: max-content;
+   margin:auto;
+   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif
+
+}
+
+#grid-account{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: auto;
+    width: max-content;
+    margin-top: 1rem;
+}
+.paiement-link{
+    text-decoration: none;
+}

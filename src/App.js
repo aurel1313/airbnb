@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import React from 'react';
+import React, { createContext } from 'react';
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -16,21 +16,28 @@ import { Logement } from './views/Logement/Logement';
 import { LogementDetail } from './views/Logement/LogementDetail';
 import Notifications from './views/Notification/Notifications';
 import { Reservation } from './views/Reservations/Reservation';
+import { LogementAjout } from './views/Logement/LogementAjout';
+import { Account } from './views/Account/Account';
+import { Payment } from './views/Account/Payment/Payment';
+import { useState } from 'react';
+export const ThemeContext = createContext(null);
 function App() {
-  
+  const [theme, setTheme] = useState('');
   
   // Initialize Firebase
  
   const style={
     backgroundColor:"black"
   }
- 
+
   return (
     <div className="App" style={style}>
       
         <Provider store={store}>
+        <ThemeContext.Provider value={theme}>
+          <Header setTheme={setTheme}/>
+        </ThemeContext.Provider>
         
-        <Header/>,
        
        
         
@@ -44,6 +51,11 @@ function App() {
           <Route path="logement/ajouterLogement" element={<AjoutLogement/>}/>
           <Route path="inscription" element={<Inscription />} />
           <Route path="connexion" element={<Connexion/>}/>
+          <Route path ="account" element={<Account/>}>
+            
+          </Route>
+          <Route path="account/payment" element ={<Payment/>}/>
+          
           <Route path="notification" element={<Notifications/>}/>
            <Route path="hebergement" element={<Hebergement />} >
               <Route path="hebergementDetail/:id" element={<HebergementDetail />} />
@@ -54,9 +66,11 @@ function App() {
             
                 <Route path="hebergement/hebergementDetail/:id/reservation" element={<Reservation/>} />
                 <Route path="logement/logementDetail/:id" element={<LogementDetail/>}/>
+                <Route path ="logement/logementAjout" element={<LogementAjout/>}/>
       </Routes>
    
       </Provider>
+      
     </div>
   );
 }

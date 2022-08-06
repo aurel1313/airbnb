@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { List } from "../../Component/List/List";
 import './Logement.scss';
+
 export const Logement = () => {
    
     const redux = useSelector((state) => state.data);

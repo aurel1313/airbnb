@@ -8,12 +8,24 @@ div.right{
     
     align-items: center;
 }
+
 .links{
     display:flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 20px;
+  
     padding-left: 20px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: baseline;
+    padding-top: 1.5rem;
+}
+
+input[type=checkbox]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+#xpOnline{
+    white-space: nowrap;
 }
