@@ -2,8 +2,20 @@ import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import data3 from "../../Data/data3.json";
 import './List.scss';
-export const List =()=>{
- 
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+export const List =(props)=>{
+  const themes = useContext(ThemeContext);
+  const style1={
+    boxShadow:"0px 0px 10px rgba(0,0,0,0.5)",
+  }
+  if(themes==="dark"){
+   style1.boxShadow="0px 0px 10px white"
+  }
+
+else{
+    style1.boxShadow="0px 0px 10px rgba(0,0,0,0.5)"
+}
   
   const [data, setData] = React.useState(data3);
   const {id}=useParams();
@@ -30,7 +42,7 @@ const json = JSON.parse(localStorage.getItem('user'))
 
  console.log(json?.user)
     return (
-     <div >
+     <div style={props.style}>
             <h1>Liste des logements</h1>
         
        <div className="infinite">
@@ -40,7 +52,7 @@ const json = JSON.parse(localStorage.getItem('user'))
          
           {data3.records.map((item, index) => (
             
-            <div className="items" key={index}>
+            <div className="items" key={index} style={style1}>
               <img src={item.fields.xl_picture_url} width="300" height="300" alt="miss photo" className="photo"/>
                 <div>
                     <Link to={`/logement/logementDetail/${item.fields.id}`}>voir plus</Link>

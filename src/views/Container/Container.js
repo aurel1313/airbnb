@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Images } from '../../Component/Images/Images'
 import './Container.scss'
+import { useContext } from 'react'
+import { ThemeContext } from "../../App"
 export const Container = () => {
     const [visible, setVisible] = useState(false)
-   
+    const themes = useContext(ThemeContext);
     const style={
         display:"flex",
         flexDirection:"column",
@@ -17,16 +19,32 @@ export const Container = () => {
         justifyContent:"flex-start",
         marginTop:"5rem",
         alignItems:"center",
+      
         
     }
-  
+    const styleLink={
+        color:"white",
+    }
+  console.log(themes)
+  if(themes==="dark"){
+        
+        style.color="white"
+        styleLink.color="white"
+       
+    }else if(themes==="light"){
+       
+        style.color="black"
+        styleLink.color="black"
+        
+        console.log(style)
+    }
     return (
         <div style={style}>
-           <h1 className="text-white" style={{marginTop:"-2rem"}} >Aidez a  accueillir les refugies </h1>
+           <h1  style={{marginTop:"-2rem"}} >Aidez a  accueillir les refugies </h1>
            
           
             <div style={{border:"1px solid white",width:"10rem"}} >
-                <a href="#" style={{color:"white"}}  >En savoir plus</a>
+                <a href="#" style={styleLink}>En savoir plus</a>
                
             </div>
           <div className='global-proposition'> 

@@ -20,19 +20,19 @@ import { LogementAjout } from './views/Logement/LogementAjout';
 import { Account } from './views/Account/Account';
 import { Payment } from './views/Account/Payment/Payment';
 import { useState } from 'react';
-export const ThemeContext = createContext(null);
+export const ThemeContext = createContext('light');
 function App() {
-  const [theme, setTheme] = useState('');
+  const [theme, setTheme] = useState('light');
   
   // Initialize Firebase
  
   const style={
     backgroundColor:"black"
   }
-
+  
   return (
     <div className="App" style={style}>
-      
+      <React.StrictMode>
         <Provider store={store}>
         <ThemeContext.Provider value={theme}>
           <Header setTheme={setTheme}/>
@@ -40,10 +40,11 @@ function App() {
         
        
        
-        
+        <ThemeContext.Provider value={theme}>
         <Routes>
+       
           <Route path="/" element={<Container/>}/>
-          
+        
           <Route path="logement" element={<Logement/>}>
               
         
@@ -68,8 +69,9 @@ function App() {
                 <Route path="logement/logementDetail/:id" element={<LogementDetail/>}/>
                 <Route path ="logement/logementAjout" element={<LogementAjout/>}/>
       </Routes>
-   
+      </ThemeContext.Provider >
       </Provider>
+      </React.StrictMode>
       
     </div>
   );

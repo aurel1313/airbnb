@@ -7,16 +7,27 @@ import './Header.scss'
 import { useContext } from "react"
 import { ThemeContext } from "../../App"
 import Switch from "react-switch";
-export const Header = () => {
+export const Header = ({setTheme}) => {
     const[state,setState]=useState(false);
-
+    const [checked,setChecked]=useState(false);
     
     const style={
         height:"50px",
         
     }
     const themes = useContext(ThemeContext);
-    console.log(themes)
+    if(checked){
+        setTheme("dark");
+       
+        document.body.style.backgroundColor = "black";
+
+    }else{
+        setTheme("light");
+        
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+    }
+
   const json = JSON.parse(localStorage.getItem('user'))
     return(
         <header className="header" >
@@ -51,7 +62,9 @@ export const Header = () => {
 
                     <div className="theme-button">
                         <label className="text-white" >Theme</label> 
-                        <Switch />
+                        <Switch checked={checked} onChange={()=>setChecked(!checked)}   uncheckedIcon={false}
+            checkedIcon={false}/>
+            
                     </div> 
                 </li>
                 
