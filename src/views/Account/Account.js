@@ -1,26 +1,48 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { CardsAccount } from "../../Component/Cards/CardsAccount"
 import './Account.scss'
 import { Payment } from "./Payment/Payment"
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 export const Account = () => {
     const style={
         backgroundColor:"white"
     }
     const[visible,setVisible]=useState(false)
-    
-    const json = JSON.parse(localStorage.getItem('user'))
-    console.log(json)
+    const[user,setUser]=useState()
+   
     let location = useLocation()
+    const auth = getAuth();
+ 
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              const uid = user.uid;
+              console.log(user)
+              setUser(user)
+              // ...
+            } else {
+              // User is signed out
+              // ...
+              console.log("pas connecté")
+              setUser(null)
+            }
+          });
+   
+    
+   
     return (
         <div style={style} className="Account">
             <h3>Gestion des parametres</h3>
             <div className="account-infos">
-                <h3>compte de {json.user.email}</h3>
-                <p>{json.user.email}</p>
-                {!visible ? <p onClick={()=>setVisible(true)}><strong>******</strong></p> : <p onClick={()=>setVisible(false)}>{json.user.uid}</p>}
-                
+              
+               {user && <h3>compte de {user.email}</h3>}
+               {user && <p>{user.email}</p>}
+                {  /*user ? <p onClick={()=>setVisible(true)}><strong>******</strong></p> :user &&<p onClick={()=>setVisible(false)}>{user.uid}</p>*/}
+              
+              
             </div>
             <div id="grid-account">
                 

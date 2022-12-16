@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { BsGlobe } from 'react-icons/bs'
 import { Link } from "react-router-dom"
 import { Links } from "../../Component/Links/Links"
@@ -7,10 +7,11 @@ import './Header.scss'
 import { useContext } from "react"
 import { ThemeContext } from "../../App"
 import Switch from "react-switch";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 export const Header = ({setTheme}) => {
     const[state,setState]=useState(false);
     const [checked,setChecked]=useState(false);
-    
+    const [user,setUser]=useState()
     const style={
         height:"50px",
         
@@ -29,6 +30,25 @@ export const Header = ({setTheme}) => {
     }
 
   const json = JSON.parse(localStorage.getItem('user'))
+  const auth = getAuth();
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          const uid = user.uid;
+          console.log(user)
+          setUser(user)
+          // ...
+        } else {
+          // User is signed out
+          // ...
+          console.log("pas connecté")
+          setUser(null)
+        }
+      });
+  },[])
+
     return(
         <header className="header" >
             
@@ -53,12 +73,12 @@ export const Header = ({setTheme}) => {
                    
                   
 
-             {!localStorage.getItem('user')&& <Link to="/inscription" className="text-white" text="Inscription" >Inscription</Link>}
+             {!user&& <Link to="/inscription" className="text-white" text="Inscription" >Inscription</Link>}
                    
                  
-                    <Link to="/connexion" className="text-white" text="Connexion" >Connexion</Link>
+                   {user ? <Link to="/connexion" className="text-white" text="deconnexion" >deconnexion</Link>:<Link to="/connexion" className="text-white" text="Connexion" >Connexion</Link>}
                     
-               {localStorage.getItem('user')&& <Link to="/account" className="text-white" style={{marginLeft:'2rem'}}>{json.user.email}</Link>} 
+               {user&& <Link to="/account" className="text-white" style={{marginLeft:'2rem'}}>{user.email}</Link>} 
 
                     <div className="theme-button">
                         <label className="text-white" >Theme</label> 

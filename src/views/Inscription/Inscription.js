@@ -19,6 +19,7 @@ export const Inscription = () => {
   const [emails,setEmail]=useState('');
   const [password,setPassword]=useState('');
 const[click,setOnclick]=useState(false);
+const[erreur,setError]=useState()
     const style={
         background:'white'
     }
@@ -26,21 +27,23 @@ const[click,setOnclick]=useState(false);
    
 
     
-   const enregistre =()=>{
+   const enregistre =async ()=>{
        console.log("test")
-       try{
+     
         setOnclick(true);
-                const resp =  createUserWithEmailAndPassword(auth,emails,password);
+                createUserWithEmailAndPassword(auth,emails,password).then((userCredential)=>{
+                    const user = userCredential.user
+                    setError(null)
+                }).catch((error)=>{
+                    console.log(error.message)
+                    setError(error)
+                });
             
-                 console.log(resp);
+                 
               
              
-       }
-         catch(error){
-             document.getElementById('error').innerHTML=error;
-                console.log(error)
-                
-            }
+       
+         
    }
    
    
@@ -80,7 +83,8 @@ const[click,setOnclick]=useState(false);
                
             </div>
             <button onClick={enregistre} >Inscription</button>
-            {emails && password && click  && <Alert severity="success"className='success'>Votre compte a été créé avec succès</Alert>}
+            { !erreur && emails && password && click   &&<Alert severity="success"className='success'>Votre compte a été créé avec succès</Alert>}
+            {erreur ? erreur.message :null}
             {/*!emails && !password && click && <Alert severity="error"className='error'>Veuillez remplir tous les champs</Alert>*/}
         </div>
     )
