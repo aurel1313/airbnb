@@ -37,7 +37,7 @@ function App() {
         <Provider store={store}>
         <ThemeContext.Provider value={theme}>
           <Header setTheme={setTheme}/>
-          <CardsTravel/>
+          
         </ThemeContext.Provider>
         
        
@@ -46,7 +46,7 @@ function App() {
         <Routes>
        
           <Route path="/" element={<Container/>}/>
-        
+         
           <Route path="logement" element={<Logement/>}>
               
         
@@ -72,6 +72,7 @@ function App() {
                 <Route path ="logement/logementAjout" element={<LogementAjout/>}/>
       </Routes>
       </ThemeContext.Provider >
+      
       </Provider>
       </React.StrictMode>
       

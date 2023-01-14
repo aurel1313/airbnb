@@ -1,6 +1,6 @@
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth"
 import React, { useEffect, useState } from "react"
-
+import Button from '@mui/material/Button';
 import { auth } from "../../config/Firebase/Firebase"
 import './Connexion.scss'
 export const Connexion = () => {
@@ -47,7 +47,7 @@ const [error,setError] =useState();
      }
 
     return(
-        <div className="connexion" style={style}>
+        <div className="formulaire"  style={style}>
             
             {
               /*  !auth.currentUser ?
@@ -61,17 +61,17 @@ const [error,setError] =useState();
             }
            
            
-           <div className="formulaire">
+           <div >
                 {!user &&
-                <div className="fields">
+                <div  >
                     <input type="text" placeholder="email" onChange={(e)=>setLoginEmail(e.target.value)} defaultValue={user?.email}/>
                     <input type="password" placeholder="password" onChange={(e)=>setLoginPassword(e.target.value)} />
-                   <button onClick={login}>Connexion</button>
+                   <Button variant="contained" onClick={login}>Connexion</Button>
                 
             </div>
 }
 {user? <p>{user?.email}</p> : <p>pas connecté</p>}
-           {user && <button onClick={logout}>deconnexion</button>}  
+           {user && <Button variant="contained" onClick={logout}>deconnexion</Button>}  
    
 
          

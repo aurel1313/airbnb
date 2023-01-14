@@ -3,6 +3,7 @@ import { Images } from '../../Component/Images/Images'
 import './Container.scss'
 import { useContext } from 'react'
 import { ThemeContext } from "../../App"
+import { CardsTravel } from '../Account/CardsTravel/CardsTravel'
 export const Container = () => {
     const [visible, setVisible] = useState(false)
     const themes = useContext(ThemeContext);
@@ -39,7 +40,7 @@ export const Container = () => {
         console.log(style)
     }
     return (
-        <div style={style}>
+        <div style={style} >
            <h1  style={{marginTop:"-2rem"}} >Aidez a  accueillir les refugies </h1>
            
           
@@ -61,7 +62,11 @@ export const Container = () => {
           <div>
               <Images src="https://picsum.photos/id/1043/2000/2150" visible={visible} style={{width:'30rem',height:'26rem'}}/>
           </div>
-        </div> 
+        </div>
+        <div className='mt-5'>
+        <CardsTravel/>  
+        </div>
+       
        </div>
     </div>
     )
