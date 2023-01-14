@@ -69,7 +69,6 @@
     "stream-consumers": "^1.0.2",
     "stylish-sidebar": "^1.1.2",
     "use-file-upload": "^1.0.11",
-    "yarn": "^1.22.17",
     "yuidocjs": "^0.10.2",
     "zlib": "^1.0.5"
   },
