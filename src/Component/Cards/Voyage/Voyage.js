@@ -38,7 +38,7 @@ export const Voyage =({dataCards,loading,error})=>{
   ariaLabel="tail-spin-loading"
   radius="1"
   wrapperStyle={{}}
-  wrapperClass=""
+ 
   visible={true}
 />}
     </div>
