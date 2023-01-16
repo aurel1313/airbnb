@@ -19,7 +19,7 @@ import { Reservation } from './views/Reservations/Reservation';
 import { LogementAjout } from './views/Logement/LogementAjout';
 import { Account } from './views/Account/Account';
 import { Payment } from './views/Account/Payment/Payment';
-import { CardsTravel } from './views/Account/CardsTravel/CardsTravel';
+import { CardsTravel } from './views/CardsTravel/CardsTravel';
 import { useState } from 'react';
 export const ThemeContext = createContext('light');
 function App() {

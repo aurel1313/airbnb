@@ -6,7 +6,7 @@ export const SearchBar=(props)=>{
     
     return(
         <div >
-            <Input type="text" value ="test" onChange={(e)=>setChange(e.target.value)} className={props.className} />
+            <Input type="text"  onChange={(e)=>setChange(e.target.value)} className={props.className} />
         </div>
     )
 

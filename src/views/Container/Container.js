@@ -3,7 +3,7 @@ import { Images } from '../../Component/Images/Images'
 import './Container.scss'
 import { useContext } from 'react'
 import { ThemeContext } from "../../App"
-import { CardsTravel } from '../Account/CardsTravel/CardsTravel'
+import { CardsTravel } from '../CardsTravel/CardsTravel'
 export const Container = () => {
     const [visible, setVisible] = useState(false)
     const themes = useContext(ThemeContext);
