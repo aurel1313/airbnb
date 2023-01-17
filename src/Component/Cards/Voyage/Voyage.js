@@ -3,7 +3,7 @@ import { TailSpin } from  'react-loader-spinner'
 import InfiniteScroll from 'react-infinite-scroller';
 import { fetchMoreData } from "../../../views/CardsTravel/CardsTravel";
 import data from "../../../features/data/data";
-export const Voyage =({dataCards,loading,value,setLoading})=>{
+export const Voyage =({dataCards,loading,value,setLoading,addData})=>{
 
  const [scrollPosition, setScrollPosition] = useState(0);
   const [resultSearch,setResultSearch]=useState(dataCards)
@@ -11,30 +11,29 @@ export const Voyage =({dataCards,loading,value,setLoading})=>{
   let resultats;
 const limit =5;
     
- /*useEffect(()=>{
+ useEffect(()=>{
  
 
     resultats = dataCards.filter(item=>item.fields.market===value)
     //setResultSearch(dataCards.filter(item=>item.fields.market===value).slice(0,limit))
    
     console.log(resultats)
-   
+
     
     
- },[resultats,value,limit])*/
- 
-  
+ },[resultats,value,limit])
+
   
    return(
     <div >
     
     
-     {/* <InfiniteScroll    pageStart={0}  loadMore={fetchMoreData}className="grid grid-cols-3" hasMore={true || false}loader={<div className="loader" key={0}>Loading ...</div>}> */}
-       
+      <InfiniteScroll    pageStart={0}  loadMore={fetchMoreData} className="grid grid-cols-3" hasMore={true || false}loader={<div className="loader" key={0}>Loading ...</div>}> 
+      
         {
+            
           
-          
-               !value && dataCards.map((element,index) => {
+               !value &&  dataCards&& dataCards.map((element,index) => {
                
               
 
@@ -59,7 +58,7 @@ const limit =5;
                     </div>
                  )
                  
-
+                    
 
                 
                 
@@ -68,7 +67,7 @@ const limit =5;
                })
               
         }
-         {/* </InfiniteScroll> */}
+          </InfiniteScroll> 
          
         {
           value &&  dataCards && dataCards.filter(item=>item.fields.market===value).slice(0,limit).map((search)=>{
@@ -95,7 +94,7 @@ const limit =5;
         
        
        
-       {loading && <TailSpin
+       {loading && !dataCards && <TailSpin
   height="80"
   width="80"
   color="#4fa94d"

@@ -19,8 +19,8 @@ const [resultSearch,setResultSearch]=useState([])
             const response =  await fetch( "https://public.opendatasoft.com/api/records/1.0/search/?dataset=airbnb-listings&q=&rows=10&facet=host_response_time&facet=host_response_rate&facet=host_verifications&facet=city&facet=country&facet=property_type&facet=room_type&facet=bed_type&facet=amenities&facet=availability_365&facet=cancellation_policy&facet=features")
             const newData = await response.json();
             const records =newData.records
-            setDataCards(records)
-            setLoading(false)
+           
+          
             if(response.status=='404'){
                 setError(true)
             }   
@@ -31,29 +31,31 @@ const [resultSearch,setResultSearch]=useState([])
        useEffect(()=>{
         fetchMoreData= async ()=>{
             setAddData(addData+100)
-            setLoading(true)
+           
             const response =  await fetch( `https://public.opendatasoft.com/api/records/1.0/search/?dataset=airbnb-listings&q=&rows=${addData}&facet=host_response_time&facet=host_response_rate&facet=host_verifications&facet=city&facet=country&facet=property_type&facet=room_type&facet=bed_type&facet=amenities&facet=availability_365&facet=cancellation_policy&facet=features`)
             const newData = await response.json();
             const records2 =newData.records
          
     
-            setDataCards(records2)
+           
            
             if(response.status==="404"){
                 console.log(response)
                 setError("aucune donnée")
             }
-         
+            if(records2.length <=300){
+                setDataCards(records2)
+            }
         }
     
-       },[addData,loading])
+       },[dataCards,addData,loading])
     
   
   
     return (
         <div>
             <Search classname="max-w-sm" value={value} setValue={setValue}/> 
-             <Voyage dataCards={dataCards} loading ={loading} error={error} value={value} search={resultSearch} setLoading={setLoading}/> 
+             <Voyage dataCards={dataCards} loading ={loading} error={error} value={value} search={resultSearch} setLoading={setLoading} /> 
              <Button onClick={fetchMoreData} error={error}>Plus de données</Button> 
         </div>
     )
