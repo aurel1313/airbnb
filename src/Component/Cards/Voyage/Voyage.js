@@ -25,10 +25,10 @@ const limit =5;
 
   
    return(
-    <div >
+    <div id="test" className="grid grid-cols-1" >
     
     
-      <InfiniteScroll    pageStart={0}  loadMore={fetchMoreData} className="grid grid-cols-3" hasMore={true || false}loader={<div className="loader" key={0}>Loading ...</div>}> 
+      <InfiniteScroll className="grid grid-cols-3" pageStart={0}  loadMore={fetchMoreData}  hasMore={true || false} loader={<div className="loader" key={0}>Loading ...</div>}> 
       
         {
             
@@ -38,10 +38,11 @@ const limit =5;
               
 
                   return(
-                    <div key={element.id} >
+                    <div  >
+                    <div   key={element.id} >
                  
-                        <div  >
-                            <div id="img" >
+                        <div>
+                            <div id="img"  >
                               {element.fields.xl_picture_url &&<img src={element.fields.xl_picture_url} className="rounded-lg" width="300" height="300"  onError={({ currentTarget }) => {
                             currentTarget.onerror = null; // prevents looping
                         currentTarget.src="https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg";
@@ -56,6 +57,7 @@ const limit =5;
                         </div> 
                         
                     </div>
+                    </div>
                  )
                  
                     
@@ -68,14 +70,15 @@ const limit =5;
               
         }
           </InfiniteScroll> 
-         
+         <div className="grid grid-cols-3">
         {
           value &&  dataCards && dataCards.filter(item=>item.fields.market===value).slice(0,limit).map((search)=>{
            
           
             return (
-              <div className="grid grid-cols-3"  key={search.id} >
-                <div  >
+            
+              <div   key={search.id} >
+                <div  id="img" >
                      {search.fields.xl_picture_url &&<img src={search.fields.xl_picture_url} className="rounded-lg" width="300" height="300"  onError={({ currentTarget }) => {
                             currentTarget.onerror = null; // prevents looping
                         currentTarget.src="https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg";
@@ -85,12 +88,13 @@ const limit =5;
                 </div>
                 
               </div>
+            
             )
             
           })
           
         }
-        
+        </div>
         
        
        
