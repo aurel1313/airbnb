@@ -71,6 +71,7 @@
     "use-file-upload": "^1.0.11",
     "yuidocjs": "^0.10.2",
     "zlib": "^1.0.5"
+    
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start ",
