@@ -32,7 +32,8 @@ function App() {
   }
   
   return (
-    <div className="App" style={style}>
+    <div className="App" >
+      
       <React.StrictMode>
         <Provider store={store}>
         <ThemeContext.Provider value={theme}>
@@ -45,7 +46,7 @@ function App() {
         <ThemeContext.Provider value={theme}>
         <Routes>
        
-          <Route path="/" element={<Container/>}/>
+          <Route path="/" element={<Container setTheme={setTheme}/>}/>
          
           <Route path="logement" element={<Logement/>}>
               
@@ -75,7 +76,8 @@ function App() {
       
       </Provider>
       </React.StrictMode>
-      
+   
+  
     </div>
   );
 }

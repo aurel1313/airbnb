@@ -4,7 +4,9 @@ import './Container.scss'
 import { useContext } from 'react'
 import { ThemeContext } from "../../App"
 import { CardsTravel } from '../CardsTravel/CardsTravel'
-export const Container = () => {
+import { Connexion } from '../Connexion/Connexion'
+import { Header } from '../Header/Header'
+export const Container = ({setTheme}) => {
     const [visible, setVisible] = useState(false)
     const themes = useContext(ThemeContext);
     const style={
@@ -40,7 +42,10 @@ export const Container = () => {
         console.log(style)
     }
     return (
+        <div>
+           
         <div style={style} >
+          
            <h1  style={{marginTop:"-2rem"}} >Aidez a  accueillir les refugies </h1>
            
           
@@ -68,6 +73,14 @@ export const Container = () => {
         </div>
        
        </div>
+    
+
+
     </div>
+    
+        
+    </div>
+
+
     )
 }
