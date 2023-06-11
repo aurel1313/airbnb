@@ -1,3 +1,4 @@
+import { TextField } from '@mui/material'
 import React, { useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 export const Search = ({ value, setValue }, ...props) => {
@@ -5,20 +6,21 @@ export const Search = ({ value, setValue }, ...props) => {
         e.preventDefault()
     }
     return (
-        <div>
+        <div className='mt-5 mb-2'>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <input
+                    <TextField
                         type="search"
                         placeholder="recherche"
                         className={props.classname}
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
+                        fullWidth
                     />
                     <button type="submit">
                         <AiOutlineSearch
-                            className="relative bottom-10 "
-                            style={{ left: '22vw' }}
+                           
+                            style={{ position:'absolute',transform:"translateX(-146%)" }}
                         />
                     </button>
                 </form>

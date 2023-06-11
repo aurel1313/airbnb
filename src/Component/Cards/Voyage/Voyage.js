@@ -1,8 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { TailSpin } from 'react-loader-spinner'
 import InfiniteScroll from 'react-infinite-scroller'
-import { fetchMoreData } from '../../../views/CardsTravel/CardsTravel'
 
+import {  Card, CardContent, CardMedia } from '@mui/material'
+import { Button, Buttons } from '../../Button/Buttons'
+import { Links } from '../../Links/Links'
+
+import { fetchMoreData } from '../../../App'
 export const Voyage = ({ dataCards, loading, value, clickLink }) => {
     const [scrollPosition, setScrollPosition] = useState(0)
     const [resultSearch, setResultSearch] = useState(dataCards)
@@ -17,10 +21,11 @@ export const Voyage = ({ dataCards, loading, value, clickLink }) => {
     let Plage
     useEffect(() => {}, [dataCards])
 
+   
     return (
-        <div id="test" className="grid grid-cols-1" data-aos="fade-down">
+        <div id="test"  data-aos="fade-down">
             <InfiniteScroll
-                className="grid grid-cols-3"
+                className="grid grid-cols-4 gap-4"
                 pageStart={0}
                 loadMore={fetchMoreData}
                 hasMore={true || false}
@@ -33,20 +38,22 @@ export const Voyage = ({ dataCards, loading, value, clickLink }) => {
                 {!value &&
                     dataCards &&
                     dataCards.map((element, index) => {
+                       
+                       const id =element.fields.id
+                  
+                      
                         return (
-                            <div>
-                                <div key={element.id}>
-                                    <div>
-                                        <div id="img">
+                            <Card>
+                           
                                             {element.fields.xl_picture_url && (
-                                                <img
-                                                    src={
+                                                <CardMedia
+                                                component="img"
+                                                   image={
                                                         element.fields
                                                             .xl_picture_url
                                                     }
-                                                    className="rounded-lg"
-                                                    width="300"
-                                                    height="300"
+                                                    className="h-1/2"
+                                                   
                                                     onError={({
                                                         currentTarget,
                                                     }) => {
@@ -64,16 +71,26 @@ export const Voyage = ({ dataCards, loading, value, clickLink }) => {
                                                     height="300"
                                                 />
                                             )}
-                                        </div>
-
-                                        <div className="flex flex-col items-start mt-2">
+                                        
+                                        <CardContent>
+                                      
                                             <p className=" font-semibold">
                                                 {element.fields.market}
                                             </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                            <p className='whitespace-normal overflow-ellipsis line-clamp-3 '>
+                                                {element.fields.description}
+                                            </p>
+                                            
+                                            <Links text="Details"  redirect={`/${id}`}/>
+                                           
+                                          
+                                       
+                                                
+                                        </CardContent>
+                                       
+                               
+                           
+                            </Card>
                         )
                     })}
             </InfiniteScroll>

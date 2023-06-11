@@ -17,6 +17,7 @@ import { Box, createTheme, ThemeProvider } from '@mui/system'
 import { FacebookAuthProvider, getRedirectResult } from 'firebase/auth'
 import { TwitterAuthProvider } from 'firebase/auth'
 import { Modals } from '../../Component/Modal/Modals'
+import { TextField } from '@mui/material'
 export const Connexion = ({ themes }) => {
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
@@ -47,6 +48,7 @@ export const Connexion = ({ themes }) => {
                 localStorage.setItem('user', JSON.stringify(user))
                 setUser1(JSON.parse(localStorage.getItem('user')))
                 console.log(user)
+                window.location.reload()
             })
             .catch((error) => {
                 setError(error)
@@ -88,6 +90,7 @@ export const Connexion = ({ themes }) => {
                 // ...
                 console.log(errorCode, errorMessage, email, credential)
             })
+     
     }
     let userBasic = JSON.parse(localStorage.getItem('user'))
 
@@ -137,28 +140,38 @@ export const Connexion = ({ themes }) => {
     // ...
   });*/
     }
-    console.log(themes)
+ 
     return (
         <div className="flex flex-row">
             <div
                 className={
                     themes == 'dark'
                         ? '  w-1/2  text-white  flex justify-center items-center h-screen '
-                        : ' w-1/2  flex flex-row items-center justify-center border-2 rounded-md h-screen  '
+                        : ' w-1/2  text-black flex flex-row items-center justify-center border-2 rounded-lg h-screen   '
                 }
             >
                 {!usersGoogle && !userBasic?.email && (
-                    <div className=" space-y-3 ">
-                        <input
+                    <div className=" space-y-3 flex flex-column items-center justify-center">
+                        
+                       
+                        <TextField
                             type="text"
                             placeholder="email"
-                            className="font-['Roboto'] font-normal text-xl"
+                            autoComplete='false'
+                            label="email"
+                            focused
+                            variant='outlined'
+                            id="outlined-basic"
                             onChange={(e) => setLoginEmail(e.target.value)}
-                            defaultValue={user1?.email}
+                            //defaultValue={user1?.email}
+                          
                         />
-                        <input
+                       
+                        <TextField
                             type="password"
+                            variant="outlined"
                             placeholder="password"
+                            autoComplete='false'
                             onChange={(e) => setLoginPassword(e.target.value)}
                         />
                         <Button
@@ -171,6 +184,7 @@ export const Connexion = ({ themes }) => {
                         <p className="font-['Roboto'] font-normal text-xl">
                             ou
                         </p>
+                        
                         <div className="flex justify-center">
                             {!userBasic && !usersGoogle && !usersFacebook && (
                                 <div className="flex flex-col ">
@@ -214,6 +228,7 @@ export const Connexion = ({ themes }) => {
                 )}
                 <div className="">
                     {userBasic?.email && (
+                        
                         <Button variant="contained" onClick={logout}>
                             deconnexion
                         </Button>
@@ -238,8 +253,8 @@ export const Connexion = ({ themes }) => {
                     />
                 )}
             </div>
-            <div className="w-1/2 h-screen bg-gradient-to-b from-red-500 to-black flex items-center">
-                <p className="text-white font-semibold text-6xl ">Connexion</p>
+            <div className="w-1/2 h-screen  flex flex-col items-center justify-center bg-gradient-to-b from-indigo-500 to-emerald-500">
+                <p className=" font-semibold text-6xl ">Connexion</p>
             </div>
         </div>
     )

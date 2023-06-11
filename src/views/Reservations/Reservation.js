@@ -2,7 +2,7 @@ import axios from "axios";
 import { jsPDF } from "jspdf";
 import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import { Button } from "../../Component/Button/Button";
+import { Buttons } from "../../Component/Button/Buttons";
 import React from "react";
 export const Reservation = (data) => {
     let location = useLocation();
@@ -45,7 +45,7 @@ export const Reservation = (data) => {
     return (
         <div style={{background:"white"}}>
             <h1>Reservation</h1>
-            <Button onClick={viewPdf}>Telecharger la reservation</Button>
+            <Buttons onClick={viewPdf}>Telecharger la reservation</Buttons>
             
         </div>
     )

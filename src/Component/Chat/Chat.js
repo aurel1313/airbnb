@@ -2,8 +2,9 @@ import { query } from 'firebase/database'
 import { QuerySnapshot, collection, onSnapshot } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
 import { db, auth } from '../../config/Firebase/Firebase'
+import moment from 'moment';
 import './Chat.scss'
-export const Chat = () => {
+export const Chat = ({targetDateFormat}) => {
     const [messages, setMessages] = useState([])
     const [classMsg, setClassMsg] = useState([])
     useEffect(() => {
@@ -25,44 +26,58 @@ export const Chat = () => {
     let getClassSend = document.getElementsByClassName('msg sent')
     let getClass = document.getElementsByClassName('msg sent')
     useEffect(() => {}, [getClass, getClassReceived, getClassSend])
-
+ 
+    const sortedData = messages.sort((a, b) => {
+        if (!a.date && !b.date) {
+          return 0;
+        } else if (!a.date) {
+          return 1;
+        } else if (!b.date) {
+          return -1;
+        } else {
+          const dateA = moment(a.date, 'DD MMMM YYYY HH:mm:ss');
+          const dateB = moment(b.date, 'DD MMMM YYYY HH:mm:ss');
+          return dateA.diff(dateB);
+        }
+      });
+      
+      console.log(sortedData);
     return (
         <div className="   ">
              
-            {messages &&
-                messages.map((message) => (
+            {sortedData &&
+               sortedData.map((message) => (
                     <div>
-                                         
-                        <div
+                         <div
                             className={`msg ${
                                message.user=== email.email
-                                    ? 'sent '
-                                    : 'received '
+                                    ? 'sent chat chat-start'
+                                    : 'received chat chat-end '
                             } `}
                         >
                             {message.user === 'aurelienfabre439@gmail.com' ? (
-                                <div className=" bg-green-500 border rounded-lg w-1/3 ">
-                                                
-                                    {message.user && <p>{message.user}</p>}
-                                                      
-                                    <p>{message.commentaires}</p>
+                                <div className='chat-header'>
+                                     {message.user && <p>{message.user}</p>}
+                                     {message.date && <p>{message.date}</p>}
+                                <div className="chat-bubble bg-gray-700  ">
+                                       <p>{message.commentaires}</p>
+                                </div>
                                 </div>
                             ) : 
                                 message.user &&
-                                <div className=" bg-cyan-600 border rounded-lg w-1/3 ">
-                                  
-                                        {console.log(message)}
-                                                   
+                                    <div className='chat-header'> 
+                                                <p >{message.user}</p>
+                                                {message.date && <p>{message.date}</p>}           
                                         {message.user &&
-                                        <div>
-                                        <p className='text-white font-bold'>{message.user}</p>
+                                        <div className="     chat-bubble chat-bubble-success ">
+                                       
                                             <p>{message.commentaires}</p>
                                         </div>
                                         }
-                                                          
+                                        </div>                  
                                         
                                    
-                                </div>
+                               
                             }
                                            
                         </div>

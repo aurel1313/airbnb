@@ -7,6 +7,7 @@ export const Textarea = ({
     name,
     defaultValue,
     onChange,
+    className
 }) => {
     useEffect(() => {
         if (refTextarea.current) {
@@ -27,6 +28,7 @@ export const Textarea = ({
                     borderColor: 'pink',
                     borderRadius: '5px',
                 }}
+                className={className}
                 onChange={onChange}
                 ref={refTextarea}
                 value={valeurTextarea}

@@ -20,6 +20,7 @@ export const Header = ({ setTheme, className }) => {
     const style = {
         backgroundColor: themes == 'dark' ? '#121212' : '#121212',
         color: themes == 'dark' ? 'white' : 'black',
+        width:'100%'
     }
     if (checked) {
         setTheme('dark')
@@ -38,17 +39,19 @@ export const Header = ({ setTheme, className }) => {
 
     return (
         <header className={className}>
-            <div id="navigation">
+            <div id="navigation" className='flex justify-center ' style={style}>
                 <img
                     src="https://img.icons8.com/color/48/000000/airbnb.png"
-                    className="left mt-3"
-                    alt=""
+                    style={{height:'50px'}}
+                    alt="Logo"
+                    className='mt-3'
+
                 />
                 <p className=" font-['Roboto'] font-normal text-white left mt-4 fw-bold fs-4 ms-3">
                     AirHotel
                 </p>
 
-                <ul className="h-24" style={style}>
+                <ul className="h-24" >
                     <li id="links" className="pt-4">
                         <Link
                             to="/"
@@ -90,7 +93,7 @@ export const Header = ({ setTheme, className }) => {
                         />
                         <BsGlobe
                             style={{ marginLeft: '2rem' }}
-                            className="mr-2"
+                            className="mr-2 fill-white"
                         />
 
                         {!email && (

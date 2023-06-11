@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from '../Button/Button'
+import { Buttons } from '../Button/Buttons'
 import { Modals } from '../Modal/Modals'
 import './Input.scss'
 export const Input = (props) => {
@@ -31,7 +31,7 @@ export const Input = (props) => {
                 {props.label}
             </label>
             {click ? <Modals visible={() => setVisible(true)} /> : null}
-            <Button onClick={() => setVisible(false)} children="close" />
+            <Buttons onClick={() => setVisible(false)} children="close" />
         </div>
     )
 }

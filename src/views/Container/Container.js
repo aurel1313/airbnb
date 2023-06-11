@@ -7,7 +7,7 @@ import { CardsTravel } from '../CardsTravel/CardsTravel'
 import { Connexion } from '../Connexion/Connexion'
 import { Header } from '../Header/Header'
 
-export const Container = ({ setTheme }) => {
+export const Container = ({ setTheme,dataCards,loading,error,value,resultSearch,setLoading,clickLink,setValue }) => {
     const [visible, setVisible] = useState(false)
     const themes = useContext(ThemeContext)
 
@@ -36,7 +36,14 @@ export const Container = ({ setTheme }) => {
                     </div>
 
                     <div style={style}>
-                        <CardsTravel />
+                        <CardsTravel      dataCards={dataCards}
+                loading={loading}
+                error={error}
+                value={value}
+                search={resultSearch}
+                setLoading={setLoading}
+                clickLink={clickLink}
+                setValue={setValue}/>
                     </div>
                 </div>
             </div>
