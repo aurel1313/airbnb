@@ -12,6 +12,11 @@ import {Firebase} from '../../config/Firebase/Firebase';
 import { getAnalytics } from 'firebase/analytics';
 import { auth } from '../../config/Firebase/Firebase';
 import { Button } from '@mui/material';
+
+import GoogleIcon from '@mui/icons-material/Google'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
+
 export const Inscription = () => {
     
     const app = initializeApp(Firebase);
@@ -20,13 +25,14 @@ export const Inscription = () => {
   const [password,setPassword]=useState('');
 const[click,setOnclick]=useState(false);
 const[erreur,setError]=useState()
+
     const style={
         background:'white'
     }
     const {register,formState:{errors}} = useForm();
-   
-
-    
+    const [open, setOpen] = useState(false)
+    const handleOpen = () => setOpen(true)
+    const handleClose = () => setOpen(false)
    const enregistre =async ()=>{
        console.log("test")
      
@@ -45,6 +51,7 @@ const[erreur,setError]=useState()
        
          
    }
+ 
    
    
     return (
@@ -83,6 +90,8 @@ const[erreur,setError]=useState()
                
             </div>
             <button onClick={enregistre} >Inscription</button>
+
+       
             { !erreur && emails && password && click   &&<Alert severity="success"className='success'>Votre compte a été créé avec succès</Alert>}
             {erreur ? erreur.message :null}
             {/*!emails && !password && click && <Alert severity="error"className='error'>Veuillez remplir tous les champs</Alert>*/}

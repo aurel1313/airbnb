@@ -37,11 +37,11 @@ export const Chat = ({targetDateFormat}) => {
         } else {
           const dateA = moment(a.date, 'DD MMMM YYYY HH:mm:ss');
           const dateB = moment(b.date, 'DD MMMM YYYY HH:mm:ss');
-          return dateA.diff(dateB);
+          return dateB.diff(dateA);
         }
       });
       
-      console.log(sortedData);
+     
     return (
         <div className="   ">
              

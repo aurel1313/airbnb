@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import React, { createContext,useEffect } from 'react'
+import React, { createContext, useEffect } from 'react'
 import { Provider } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
@@ -24,6 +24,12 @@ import { useState } from 'react'
 import { Filter } from './Component/Filter/Filter'
 import { Avis } from './views/Avis/Avis'
 import { HomeTravel } from './Component/Cards/Voyage/HomeTravel'
+import { OnlineExperience } from './views/OnlineExperience/OnlineExperience'
+import {
+    QueryClient,
+    QueryClientProvider,
+    useQuery,
+} from '@tanstack/react-query'
 export let fetchMoreData
 export const ThemeContext = createContext('light')
 function App() {
@@ -36,7 +42,7 @@ function App() {
     const [resultSearch, setResultSearch] = useState([])
     const [filtrePlage, setFiltrePlage] = useState()
     const [clickLink, setClickLink] = useState(false)
-    
+
     useEffect(() => {
         async function loadData() {
             setLoading(true)
@@ -77,9 +83,10 @@ function App() {
     const style = {
         backgroundColor: 'black',
     }
-   
+    const queryClient = new QueryClient()
+
     return (
-        <div className="App">
+        <div>
             <React.StrictMode>
                 <Provider store={store}>
                     <ThemeContext.Provider value={theme}>
@@ -87,66 +94,88 @@ function App() {
                     </ThemeContext.Provider>
 
                     <ThemeContext.Provider value={theme}>
-                        <Routes>
-                            <Route
-                                path="/"
-                                element={<Container setTheme={setTheme}     dataCards={dataCards}
-                                loading={loading}
-                                error={error}
-                                value={value}
-                                search={resultSearch}
-                                setLoading={setLoading}
-                                clickLink={clickLink} 
-                                setValue ={setValue}/>}
-                            />
-                            <Route path='/:id' element={<HomeTravel dataCards={dataCards}/>}/>
-                            <Route
-                                path="logement"
-                                element={<Logement />}
-                            ></Route>
-                            <Route
-                                path="logement/ajouterLogement"
-                                element={<AjoutLogement />}
-                            />
-                            <Route
-                                path="inscription"
-                                element={<Inscription />}
-                            />
-                            <Route
-                                path="connexion"
-                                element={<Connexion themes={theme} />}
-                            />
-                            <Route path="account" element={<Account />}></Route>
-                            <Route
-                                path="account/payment"
-                                element={<Payment />}
-                            />
-                            <Route path="avis" element={<Avis />}></Route>
-                            <Route
-                                path="notification"
-                                element={<Notifications />}
-                            />
-                            <Route path="hebergement" element={<Hebergement />}>
+                        <QueryClientProvider client={queryClient}>
+                            <Routes>
                                 <Route
-                                    path="hebergementDetail/:id"
-                                    element={<HebergementDetail />}
+                                    path="/"
+                                    element={
+                                        <Container
+                                            setTheme={setTheme}
+                                            dataCards={dataCards}
+                                            loading={loading}
+                                            error={error}
+                                            value={value}
+                                            search={resultSearch}
+                                            setLoading={setLoading}
+                                            clickLink={clickLink}
+                                            setValue={setValue}
+                                        />
+                                    }
                                 />
-                            </Route>
+                                <Route
+                                    path="/:id"
+                                    element={
+                                        <HomeTravel dataCards={dataCards} />
+                                    }
+                                />
+                                <Route
+                                    path="logement"
+                                    element={<Logement />}
+                                ></Route>
+                                <Route
+                                    path="logement/ajouterLogement"
+                                    element={<AjoutLogement />}
+                                />
+                                <Route
+                                    path="inscription"
+                                    element={<Inscription />}
+                                />
+                                <Route
+                                    path="connexion"
+                                    element={<Connexion themes={theme} />}
+                                />
+                                <Route
+                                    path="account"
+                                    element={<Account />}
+                                ></Route>
+                                <Route
+                                    path="account/payment"
+                                    element={<Payment />}
+                                />
+                                <Route path="avis" element={<Avis />}></Route>
+                                <Route
+                                    path="notification"
+                                    element={<Notifications />}
+                                />
+                                <Route
+                                    path="hebergement"
+                                    element={<Hebergement />}
+                                >
+                                    <Route
+                                        path="hebergementDetail/:id"
+                                        element={<HebergementDetail />}
+                                    />
+                                </Route>
 
-                            <Route
-                                path="hebergement/hebergementDetail/:id/reservation"
-                                element={<Reservation />}
-                            />
-                            <Route
-                                path="logement/logementDetail/:id"
-                                element={<LogementDetail />}
-                            />
-                            <Route
-                                path="logement/logementAjout"
-                                element={<LogementAjout />}
-                            />
-                            <Route path="filtreMer" element={<Filter />} />
-                        </Routes>
+                                <Route
+                                    path="hebergement/hebergementDetail/:id/reservation"
+                                    element={<Reservation />}
+                                />
+                                <Route
+                                    path="logement/logementDetail/:id"
+                                    element={<LogementDetail />}
+                                />
+                                <Route
+                                    path="logement/logementAjout"
+                                    element={<LogementAjout />}
+                                />
+                                <Route path="filtreMer" element={<Filter />} />
+                                <Route
+                                    path="xpOnline"
+                                    element={<OnlineExperience />}
+                                />
+                            </Routes>
+                        </QueryClientProvider>
                     </ThemeContext.Provider>
                 </Provider>
             </React.StrictMode>
