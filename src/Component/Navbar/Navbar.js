@@ -23,9 +23,11 @@ export const Navbar = ({ style, checked, setChecked, theme }) => {
     const isMobile = useMediaQuery('(max-width: 600px)')
     return (
         <div
-            className={`${theme === 'dark' ? 'text-white' : 'text-dark-color'}`}
+            className={`${
+                theme === 'dark' ? 'text-white ' : 'text-dark-color '
+            }`}
         >
-            <nav>
+            <nav style={{ height: '84px' }}>
                 {isMobile && (
                     <div className="max:[600px]:hidden">
                         <button className="block " onClick={toogleMenu}>

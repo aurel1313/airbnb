@@ -26,17 +26,14 @@ export const OnlineExperience = () => {
     const mapElement = useRef(null)
     const mapRef = useRef(null)
     const [position, setPosition] = useState([0, 0])
-    const [drawing, isDrawing] = useState(false)
-    let tooglePopup
-    let x,
-        y = 0
+
     useEffect(() => {
         let overlay = new Overlay({
             element: document.getElementById('popup'),
             positioning: 'center-left',
 
             autoPan: false,
-            stopEvent: false,
+            stopEvent: true,
 
             autoPanAnimation: {
                 duration: 250,
@@ -78,7 +75,7 @@ export const OnlineExperience = () => {
             var prettyCoord = toStringHDMS(
                 evt.coordinate,
 
-                2
+                1
             )
 
             /*popup.show(
@@ -98,9 +95,18 @@ export const OnlineExperience = () => {
             // Add styling and logic as needed
             vectorSource.addFeature(feature)
             let info = document.getElementById('info')
+
             info.addEventListener('click', () => {
-                popup.hide()
-                vectorSource.clear()
+                /*vectorSource.getFeatures().forEach((el) => {
+                    vectorSource.removeFeature(el)
+                })*/
+
+                if (vectorSource.getFeaturesAtCoordinate(evt.coordinate)) {
+                    popup.hide()
+                    vectorSource.removeFeature(
+                        vectorSource.getFeaturesAtCoordinate(evt.coordinate)[0]
+                    )
+                }
             })
         })
 
