@@ -1,18 +1,19 @@
 import { TextField } from '@mui/material'
 import React, { useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
-export const Search = ({ value, setValue }, ...props) => {
+export const Search = ({ value, setValue,theme }, ...props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
     }
     return (
-        <div className='mt-5 mb-2'>
+        <div >
             <div>
                 <form onSubmit={handleSubmit}>
                     <TextField
                         type="search"
                         placeholder="recherche"
-                        className={props.classname}
+                       style={{backgroundColor : `${theme==='dark'  ? '#3C3C3C' :"white"}  `} }
+                       className='border border-rounded'
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
                         fullWidth

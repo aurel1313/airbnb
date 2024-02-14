@@ -6,13 +6,13 @@ import { useEffect } from 'react'
 import { Search } from '../../Component/Search/Search'
 
 
-export const CardsTravel = ({ dataCards,loading,error,value,resultSearch,setLoading,clickLink,setValue}) => {
+export const CardsTravel = ({ dataCards,loading,error,value,resultSearch,setLoading,clickLink,setValue,theme}) => {
    
 
     return (
         <div>
             <div className="flex flex-row"></div>
-            <Search classname="w-1/2" value={value} setValue={setValue} />
+            <Search classname="w-1/2" value={value} setValue={setValue} theme={theme} />
 
             <Voyage
                 dataCards={dataCards}
@@ -22,6 +22,7 @@ export const CardsTravel = ({ dataCards,loading,error,value,resultSearch,setLoad
                 search={resultSearch}
                 setLoading={setLoading}
                 clickLink={clickLink}
+                theme={theme}
             />
            
         </div>

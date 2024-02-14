@@ -79,11 +79,11 @@ function App() {
     }
    
     return (
-        <div className="App">
+        <div >
             <React.StrictMode>
                 <Provider store={store}>
                     <ThemeContext.Provider value={theme}>
-                        <Header setTheme={setTheme} />
+                        <Header setTheme={setTheme}  />
                     </ThemeContext.Provider>
 
                     <ThemeContext.Provider value={theme}>

@@ -4,10 +4,9 @@ import './Container.scss'
 import { useContext } from 'react'
 import { ThemeContext } from '../../App'
 import { CardsTravel } from '../CardsTravel/CardsTravel'
-import { Connexion } from '../Connexion/Connexion'
-import { Header } from '../Header/Header'
 
-export const Container = ({ setTheme,dataCards,loading,error,value,resultSearch,setLoading,clickLink,setValue }) => {
+import { Link } from 'react-router-dom'
+export const Container = ({ setTheme,dataCards,loading,error,value,resultSearch,setLoading,clickLink,setValue },...props) => {
     const [visible, setVisible] = useState(false)
     const themes = useContext(ThemeContext)
 
@@ -32,9 +31,19 @@ export const Container = ({ setTheme,dataCards,loading,error,value,resultSearch,
             <div>
                 <div className="global-proposition">
                     <div className="proposition">
-                        <Images src="https://picsum.photos/id/11/1630/500" />
+                        <Images src="https://picsum.photos/id/11/1630/500" theme={themes} className=" h-1/3 max-[600px]:h-full" />
                     </div>
-
+                    <div className="content">
+                <div className="button mt-5">
+                    <Link
+                        className="more "
+                        to="/logement"
+                        onClick={props.onClick}
+                    >
+                        Details
+                    </Link>
+                </div>
+            </div>
                     <div style={style}>
                         <CardsTravel      dataCards={dataCards}
                 loading={loading}
@@ -43,7 +52,9 @@ export const Container = ({ setTheme,dataCards,loading,error,value,resultSearch,
                 search={resultSearch}
                 setLoading={setLoading}
                 clickLink={clickLink}
-                setValue={setValue}/>
+                setValue={setValue}
+                theme={themes}
+                />
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ import { Button, Buttons } from '../../Button/Buttons'
 import { Links } from '../../Links/Links'
 
 import { fetchMoreData } from '../../../App'
-export const Voyage = ({ dataCards, loading, value, clickLink }) => {
+export const Voyage = ({ dataCards, loading, value, clickLink,theme }) => {
     const [scrollPosition, setScrollPosition] = useState(0)
     const [resultSearch, setResultSearch] = useState(dataCards)
 
@@ -41,9 +41,12 @@ export const Voyage = ({ dataCards, loading, value, clickLink }) => {
                        
                        const id =element.fields.id
                   
-                      
+                      const styleCard ={
+                        background:theme=='dark'?'rgb(18,18,18)':'white',
+                        color:theme=='dark'?'white':'black'
+                      }
                         return (
-                            <Card>
+                            <Card style={styleCard}>
                            
                                             {element.fields.xl_picture_url && (
                                                 <CardMedia
